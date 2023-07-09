@@ -1,5 +1,18 @@
 @charset "UTF-8";
 
 body {
-    
+    font: 12pt arial;
+}
+
+p {/* por padrão, todos os parágrafos desse site serão justificados */
+    text-align: justify;
+    text-indent: 20pt; /* todos terão aquele recuo que todo parágrafo tem no início */
+}
+
+p.meio { /* aqueles que tiverem a classe "dir", ficarão à direita */
+    text-align: left;
+}
+
+p.especial {
+    background-color: rgba(242, 255, 0, 0.468);
 }
