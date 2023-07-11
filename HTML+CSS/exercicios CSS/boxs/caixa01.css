@@ -21,11 +21,10 @@ h1 {
 }
 
 a { /*Personalizei colocando mais tags para esperimentar*/
-    border: 5px solid blue;
-    padding: 5px 5px;   
+    border: 2px solid blue;
+    padding: 3px 3px;   
     text-decoration: none;  
-    margin: 10px;
+    margin: 5px;
     color: brown;
     background-color: aquamarine;
-    outline: 5px dashed yellow;
 }
