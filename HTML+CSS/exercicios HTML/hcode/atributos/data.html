@@ -9,7 +9,7 @@
 </head>
 <body>
     <header>
-        <h1>Hydrah Technology</h1>
+        <h1>Curso HTML plataforma Hcode</h1>
         <nav>
             <a href="atributos.html">Atributos</a>
             <a href="#">Eventos</a>
@@ -19,10 +19,26 @@
     <main>
         <section>
             <h2>Atributo global - Data-*</h2>
-            <p>Esse atributo é usado para armazenar dados em um elemento. no lugar do (*) deve-se definir um nome</p>
-            <ul>
-                <li></li>
-            </ul>
+            <p>Esse atributo é usado para armazenar dados em um elemento. no lugar do (*) deve-se definir um nome.</p>
+            <div>
+                <h4>Exemplo:</h4>
+                <ul>
+                    <li data-id="1" data-email="joao@hcode.com">João Ragel</li>
+                    <li data-id="2" data-email="glaucio@hcode.com">Glaucio Daniel</li>
+                    <li data-id="3" data-email="djalma@hcode.com">Djalma Sindeaux</li>
+                </ul>
+                <!--Breve introdução ao javascript-->
+                <script> 
+                    document.querySelectorAll('li').forEach(liEl => {
+                        console.log(liEl.dataset);
+                        console.log(liEl.dataset.email);
+                    });                    
+                </script>
+                <h4>Codigo:</h4>
+                <img src="../image/ptdatacode.png" alt="Codigo data">
+                <h4>Console</h4>
+                <img src="../image/ptdataconsole.png" alt="Console data">
+            </div>
         </section>
     </main>
     <footer>
