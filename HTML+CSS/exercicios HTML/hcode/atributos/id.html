@@ -6,6 +6,13 @@
     <title>Id</title>
     <link rel="shortcut icon" href="../image/nerd.ico" type="image/x-icon">
     <link rel="stylesheet" href="../hcode.css">
+    <style>
+        #box-1 {
+            background-color: coral;
+            width: 100px;
+            height: 100px;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -20,9 +27,29 @@
         <section>
             <h2>Atributo global - Id</h2>
             <p>Esse atributo define uma identidade unica para o elemento</p>
-            <ul>
-                <li></li>
-            </ul>
+
+            <div id="box-1">caixa</div>
+            <div id="box-1">caixa</div>
+
+            <script>
+            
+            const box1 = document.getElementById('box-1');
+
+            console.log(box1);
+
+            const qsBox1 = document.querySelector('#box-1');
+
+            console.log(qsBox1);
+
+            const qsaBox1 = document.querySelectorAll('#box-1');
+
+            console.log(qsaBox1);
+
+            </script>
+            <h4>Codigo:</h4>
+            <img src="../image/ptid.png" alt="Codigo ID">
+            <h4>Console:</h4>
+            <img src="../image/ptidconsole.png" alt="Codigo console">
         </section>
     </main>
     <footer>
