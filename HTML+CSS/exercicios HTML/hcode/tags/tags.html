@@ -80,17 +80,42 @@
             <h2>Tag 'script'</h2>
             <p>Essa tag serve para inserir scipts no html. É mais usada para colocar codigos JavaScript. É recomendado colocar os codigos JavaScript em um arquivo externo e chama-lo dentro do html. Os scripts podem travar a rederização do documento, então recomenda-se que eles sejam executados por ultimo, para isso deve-se colocar os scripts no final do documento antes do termino da tag body (/body) ou colocar o atr defer (usado para rodar os scripts por ultimo)</p>
         </section>
-        <section id="tag_div"><!---->
+        <section id="tag_div"><!--display block; Style: none-->
             <h2>Tag 'div'</h2>
-            <p>Essa tag é usada para dividir um conteudo na página, não tem valor semantico e serve basicamente para colocar estilos css em uma parte espefica do documento. </p>
+            <p>Essa tag é usada para dividir um conteudo na página ou agrupar tags do documento, não tem valor semantico e serve basicamente para colocar estilos css em uma parte espefica do documento. </p>
         </section>
-        <section id=""><!---->
-            <h2></h2>
-            <p></p>
+        <section id="tag_span"><!--Style: none; display none-->
+            <h2>Tag 'span'</h2>
+            <p>Essa tag serve basicamente para agrupar texto e colocar um estilo css. Ela não tem estilo e não possui valor semantico.</p>
         </section>
-        <section id=""><!---->
-            <h2></h2>
-            <p></p>
+        <section id="tag_link"><!--
+            só abre; display none; possui todos atr global; + atr especificos: 
+            crosorigin: solicitações de dominios diferentes (anonimos + credenciais de usuario)
+            href: link do doc (caminho do arquivo ou url do site)
+            hreflang: define a linguagem do outro doc que esta sendo lincado;
+            rel: relacionamento do doc atual com o relacionameto do doc que esta sendo vincula (autenate; dns-prefetch, icon, license, next, pingback, preconnect, preload, preender, prev e search stylesheet);
+            media: qual dispositivo se aplica a esse link;
+            size: alturaxlargura
+            type: tipo do doc (image/x-icon - text/css)
+
+        -->
+            <h2>Tag link</h2>
+            <p>Serve para lincar um arquivo externo. pode ser espeficamente um arquivo externo mas tabem pode ser um site ou outas paginas. É comumente usado para lincar arquivos css, favicon e scripts. recomenda-se usar na tag 'head'</p>
+
+            <link rel="stylesheet" href="css/table.css"><!---->
+            <link rel="alternate" href="link-en" hreflang="en"><!---->
+            <link rel="author" href="https://github.com/joaohcrangel"><!--define uma url para a pagina do autor ou a pagina responsavel pelo doc.-->
+            <link rel="dns-prefetch" href="https://hcode.com.br"><!---->
+            <link rel="help" href="https://hcode.com.br/help"><!--pagina fornecedor ajuda para os rederizadores a trazer uma ajuda personalizada para i usuario-->
+            <link rel="icon" href="images/logo.ico" type="image/x-icon"><!---->
+            <link rel="license" href="https://hcode.com.br/license"><!---->
+            <link rel="next" href="https://hcode.com.br/next"><!---->
+            <link rel="pingback" href="https://hcode.com.br/pingback"><!--para monitorar ou fazer um relatório de qunatas vezes esse link foi acessado.-->
+            <link rel="preconnect" href="https://hcode.com.br/pingback"><!---->
+            <link rel="preload" href="images/logo.png" as="image"><!---->
+            <link rel="prerender" href="table.html"><!---->
+            <link rel="prev" href="https://hcode.com.br/prev"><!---->
+            <link rel="search" href="open-search.xml"><!---->
         </section>
         <section id=""><!---->
             <h2></h2>
