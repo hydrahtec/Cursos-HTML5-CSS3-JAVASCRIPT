@@ -29,21 +29,65 @@
             <h2>Tag Title</h2>
             <p>Éssa tag nomeia as paginas do seu site; Cada pagina deve ter um title unico que explique do que se trata a pagina; o title fica visivel na janela do navegador e talves num preview; no icone dos atalhos do navegador; herda todos os atributos globais e seu style: dispaly none.</p>
         </section>
-        <section id="tag_meta"><!--name + contente(so recebe text)-->
-            <h2>Tag meta</h2>
+        <section id="tag_meta"><!--charset + name + contente(só recebe text)-->
+            <h2>Tag 'meta'</h2>
             <p>Essa tag define um metadato da página; Esses metadados serão usados por navegadores, mecanismos de pesquisa e outros serviços da web; eles devem ser declarados dentro do 'head' da página; style: none</p>
             <div>
                 <meta charset="UTF-8"><!--defibe o padrão de caracteres que será usado; o UTF-8 abrange quase todos os idiomas e padrões de simbolos e acentuações-->
-                <meta name="viewport" content="width=device-width" initial-scale="1.0"><!--tamanho da janela de visualização sera o tamanho da janela do dispositivo, começando na esca de 1.-->
+                <meta name="viewport" content="width=device-width" initial-scale="1.0"><!--tamanho da janela de visualização sera o tamanho da janela do dispositivo, começando na escala de 1.-->
                 <meta http-equiv="X-UA-Compatible" content="ie-edge"><!--força o navegador usar outro motor de renderização, + atualizado; nesse caso o do Edge-->
                 <meta name="discription" content="Exemplo de descrição da pagina"><!--define a descrição da pagina, comenta sobre seu conteudo. obs importante para os mecanismos de busca-->
                 <meta name="keywords" content="HTML,CSS,JavaScript,PHP"><!--palavras chaves para que os mecanismos de pesquisa achem a página-->
                 <meta name="author" content="Eliel Pereira"><!--Quem desenvolveu a página em questão-->
-                <meta http-equiv="refresh" content=""><!--Define um temporizador para que a página atualize sozinha, é possivel ainda colocar um link de redirecionamento para outra página basta colocar ,url dentro do contente-->
-                <meta name="application-name" content="Hcode Treinamentos"><!--estabelece um nome especifo para nome de atalhos ou para nome de aplicativos, ele substitui o title da pagina. -->
-                <meta name="generator" content="Visual Studio Code"><!---->
+                <!--<meta http-equiv="refresh" content="">Define um temporizador para que a página atualize sozinha, é possivel ainda colocar um link de redirecionamento para outra página basta colocar ,url dentro do contente-->
+                <meta name="application-name" content="Hydrah Technology"><!--estabelece um nome especifo para nome de atalhos ou para nome de aplicativos, ele substitui o title da pagina. -->
+                <meta name="generator" content="Visual Studio Code"><!--Especifica qual o recurso ou aplicação qu efoi usada para criar a página-->
             </div>
         </section>
+        <section id="tag_p"><!--Recebe todos os atributos globais; style: dispaly block + margin 1em encima e embaixo e 0 dos lados.-->
+            <h2>Tag 'p'</h2>
+            <p>Essa tag é usada para colocar textos na pagina, comentaros, posts...</p>
+        </section>
+        <section id="tag_h"><!--Possui todos os atr global. style: display block ; abre e fecha-->
+            <h2>Tag 'h'</h2>
+            <p>A tag H é usada para definir os titulos do documento. Ela varia de nivel 1 á 6 (h1, h2, h3, h4, h5 e h6), sendo o 1 mais importante e o 6 menos importante. É recomendado que as páginas tenham somente um h1 por página pois ele representa o titulo principal da página e será muito importante para os mecanismos de busca. Os hs de 2 á 6 podem ser usados livremente respeitando sua ordem de importancia.  </p>
+
+            <p>Exemplo:</p>
+            <h1>Texto exemplo</h1><!--style: fonnt: 2em; margin top e botton de 0.67em e margins left e right 0; font-wegth: bold-->
+            <h2>Texto exemplo</h2><!-- Essa tag só pode ser usado depois da utilização do h1; style: font: 1.5em; margin top e botton de 0.83em e margins left e right 0; font-wegth: bold-->
+            <h3>Texto exemplo</h3><!--style: font: 1.17em; margin top e botton de 0...em e margins left e right 0; font-wegth: bold-->
+            <h4>Texto exemplo</h4><!--style: font: ?em; margin top e botton de 1.33em e margins left e right 0; font-wegth: bold-->
+            <h5>Texto exemplo</h5><!--style: font: 0.83em; margin top e botton de 1.67em e margins left e right 0; font-wegth: bold-->
+            <h6>Texto exemplo</h6><!--style: font: ,67em; margin top e botton de 2.33em e margins left e right 0; font-wegth: bold-->
+        </section>
+        <section id="tag_style"><!--display: none; Possui todos os atr global; -->
+            <h2>Tag 'style'</h2>
+            <p>Define os esctilos CSS da página ou de um elemento espedifico. Posusi os atributos 'media' (que define um estilo de CSS especifico para diferentes aplicações como por exemplo uma impressão - media="print") e 'type' (que define qual o tipo de midia, no caso o padrão é tex/css)</p>
+        </section>
+        <section id="tag_script"><!-- dispaly none;
+            atr: async (define qu o script seja executado de forma assincrona mas só funciona em arquivos externo);
+            atr: charset;
+            atr: defer (o arquivo será executado após a pagina ser carregada - esse atr deve ser definido diretamento no arquivo externo);
+            atr: src (define o caminho do arquivo externo);
+            atr type (define o tipo de midia - text/javaScript);
+
+            <script>alert('No inicio do body')</script>
+                <h1>Page!</h1>
+            <script>alert('No final do body')</script>
+            <script src="js/script.js"></script>
+
+        -->
+            <h2>Tag 'script'</h2>
+            <p>Essa tag serve para inserir scipts no html. É mais usada para colocar codigos JavaScript. É recomendado colocar os codigos JavaScript em um arquivo externo e chama-lo dentro do html. Os scripts podem travar a rederização do documento, então recomenda-se que eles sejam executados por ultimo, para isso deve-se colocar os scripts no final do documento antes do termino da tag body (/body) ou colocar o atr defer (usado para rodar os scripts por ultimo)</p>
+        </section>
+        <section id="tag_div"><!---->
+            <h2>Tag 'div'</h2>
+            <p>Essa tag é usada para dividir um conteudo na página, não tem valor semantico e serve basicamente para colocar estilos css em uma parte espefica do documento. </p>
+        </section>
+        <section id=""><!---->
+            <h2></h2>
+            <p></p>
+        </section>
         <section id=""><!---->
             <h2></h2>
             <p></p>
@@ -52,31 +96,7 @@
             <h2></h2>
             <p></p>
         </section>
-        <section id="">
-            <h2></h2>
-            <p></p>
-        </section>
-        <section id="">
-            <h2></h2>
-            <p></p>
-        </section>
-        <section id="">
-            <h2></h2>
-            <p></p>
-        </section>
-        <section id="">
-            <h2></h2>
-            <p></p>
-        </section>
-        <section id="">
-            <h2></h2>
-            <p></p>
-        </section>
-        <section id="">
-            <h2></h2>
-            <p></p>
-        </section>
-        <section id="">
+        <section id=""><!---->
             <h2></h2>
             <p></p>
         </section>
