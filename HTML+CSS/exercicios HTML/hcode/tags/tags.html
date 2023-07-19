@@ -102,20 +102,43 @@
             <h2>Tag link</h2>
             <p>Serve para lincar um arquivo externo. pode ser espeficamente um arquivo externo mas tabem pode ser um site ou outas paginas. É comumente usado para lincar arquivos css, favicon e scripts. recomenda-se usar na tag 'head'</p>
 
-            <link rel="stylesheet" href="css/table.css"><!---->
-            <link rel="alternate" href="link-en" hreflang="en"><!---->
+            <link rel="stylesheet" href="css/table.css" type="text/css"><!--linca esse doc com um arquivo css externo-->
+            <link rel="alternate" href="link-en" hreflang="en"><!--fornece uma versão alternativa do doc. por exemplo uma versão em texto do site-->
             <link rel="author" href="https://github.com/joaohcrangel"><!--define uma url para a pagina do autor ou a pagina responsavel pelo doc.-->
-            <link rel="dns-prefetch" href="https://hcode.com.br"><!---->
+            <link rel="dns-prefetch" href="https://hcode.com.br"><!--ajuda na aceleração da navegação da pagina, carregando outros dominios para otimizar-->
             <link rel="help" href="https://hcode.com.br/help"><!--pagina fornecedor ajuda para os rederizadores a trazer uma ajuda personalizada para i usuario-->
-            <link rel="icon" href="images/logo.ico" type="image/x-icon"><!---->
-            <link rel="license" href="https://hcode.com.br/license"><!---->
-            <link rel="next" href="https://hcode.com.br/next"><!---->
+            <link rel="icon" href="images/logo.ico" type="image/x-icon"><!--linca um icone favicon com este doc-->
+            <link rel="license" href="https://hcode.com.br/license"><!--pagina com a licença do conteudo presente na página-->
+            <link rel="next" href="https://hcode.com.br/next"><!--se a chanse do usuario ir para uma pagina seguinte for grande, esse link vai ajudar carregando essa pagina em background para otimiza a esperiencia do user-->
             <link rel="pingback" href="https://hcode.com.br/pingback"><!--para monitorar ou fazer um relatório de qunatas vezes esse link foi acessado.-->
-            <link rel="preconnect" href="https://hcode.com.br/pingback"><!---->
-            <link rel="preload" href="images/logo.png" as="image"><!---->
-            <link rel="prerender" href="table.html"><!---->
-            <link rel="prev" href="https://hcode.com.br/prev"><!---->
-            <link rel="search" href="open-search.xml"><!---->
+            <link rel="preconnect" href="https://hcode.com.br/pingback"><!--esse recurso já pre conecta outras paginas, recursos ou sites para otimização-->
+            <link rel="preload" href="images/logo.png" as="image"><!--carrega a pagina ou recurso antecipadamente.-->
+            <link rel="prerender" href="table.html"><!--antecipa o carregamento de recursos-->
+            <link rel="prev" href="https://hcode.com.br/prev"><!--ja carrega uma pagina anterior na paginação para ajufar o usuario.-->
+            <link rel="search" href="open-search.xml"><!--pagina de referencia para buscas-->
+        </section>
+        <section id="tag_noscript"><!---->
+            <h2>Tag 'noscript'</h2>
+            <p>A tag define um conteudo alternativo para uruarios que desativarem scripts no navegador ou quando os scripts não forem suportados. Nesse caso ira mostrar somente o html eu estiver dentro dessa tag, tambem é possivel definir estilos de css especificamente para esses casos.</p>
+        </section>
+        <section id="tag_embad"><!--
+            abre e fecha; style: outline: none.
+            heigth: altura
+            src: caminho
+            type:tipo
+            width: largura
+
+            <embed src="swf/dragracer.swf" type="application/x-shockwave-flash" width="1024" height="768">
+        -->
+            <h2>Tag 'embad'</h2>
+            <p>Usada para definir um conteudo externo embutido que será reproduzido dentro de um quadro dentro do doc.</p>
+        </section>
+        <section id="tag_object"><!--
+            <object width="600" height="600" data="pdf/Tag_ object.pdf"></object>
+
+        -->
+            <h2>Tag 'object'</h2>
+            <p>Tag usada para definir um objeto incorporado no doc. É possivel incorporar audio, video, applets java activex, pdf e etc. Tabem é possivel passar parametros usando a tag 'param' que será vista mais a frente.</p>
         </section>
         <section id=""><!---->
             <h2></h2>
@@ -125,19 +148,7 @@
             <h2></h2>
             <p></p>
         </section>
-        <section id="">
-            <h2></h2>
-            <p></p>
-        </section>
-        <section id="">
-            <h2></h2>
-            <p></p>
-        </section>
-        <section id="">
-            <h2></h2>
-            <p></p>
-        </section>
-        <section id="">
+        <section id=""><!---->
             <h2></h2>
             <p></p>
         </section>
