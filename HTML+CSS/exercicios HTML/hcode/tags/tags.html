@@ -155,7 +155,7 @@
             <object data="pdf/Tag_ object.pdf" type="application/pdf" width="600" height="600"></object>
         </section>
         <section id="tag_param"><!--
-            Possui todos os atr global /a atr proprio:
+            Possui todos os atr global /atrs proprio:
             name: nome do recurso;
             value: o valor do recurso            
         -->
@@ -163,9 +163,9 @@
             <p>Serve para passar parametros adicinais, geralmente, para a tag object. </p>
 
             <object data="pdf/Tag_ object.pdf#page3" type="application/pdf" width="600" height="800">
-                <param name="Page" value="3">
+                <param name="page" value="3">
             </object>
-
+            
         </section>
         <section id="tag_base"><!--
             todos atr global;
@@ -179,13 +179,19 @@
             <p>É usada para definir uma URL ou domnio padrão dentro do doc. Séra uasdo como base, para todos os links dentro do documento html, o link ou dominio que for declado no tag base. incluindo se será aberto em nova página ou não. só pode haver 1 tag base no doc e sempre deve estar acomphada do seu 'href:' onde será fornecido a URL padrão</p>
         </section>
         <section id="tag_iframe"><!--
-            <h1>Iframe</h1>
-
-            <iframe src="embed.html" width="1024" height="768"></iframe>
+            style: iframa:focus= outline: none
+                    iframe[seamless]: Com esse atributo ele ganha (display: block).
+            possui todos os atrs global /atrs proprios;
+            heigth:define a altura do quadro(numero);
+            width:defina a largura(numero);
+            name:define o nome do quadro(URL);
+            sandbox:ativa conteudos restritos por padrão (allow-forms, allow-poiter-lock, allow popups, allow-same-origin, allow scripts, allow-top-navegation);
+            src:define qual fonte do doc a ser embutido(URL);
+            srcdoc:define quala estrutura do doc a ser embutido(HTML);
         -->
             <h2>Tag 'iframe'</h2>
-            <p></p>
-            
+            <p>É usada para definir um quandro embutido na bagina. Esse quadro é usado para incorporar outro html no html atual. É possivel passar o link do html ou simplestmente inserir o html diretamento no quadro. </p>
+            <iframe src="../atributos/atributos.html" width="768" height="600"></iframe>
         </section>
         <section id="tag_a"><!--
             <style>
