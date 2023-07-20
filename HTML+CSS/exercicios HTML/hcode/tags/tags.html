@@ -573,7 +573,13 @@
             <h2>Tag 'aside'</h2>
             <p></p>
         </section>
-        <section id="tag_nav"><!---->
+        <section id="tag_nav"><!--
+            <nav>
+                <a href="https://www.hcode.com.br">Hcode</a> |
+                <a href="https://youtube.com/c/HcodeBrasil">YouTube</a> |
+                <a href="https://facebook.com/hcodebr">Facebook</a>
+            </nav>
+        -->
             <h2>Tag 'nav'</h2>
             <p></p>
         </section>
@@ -1003,7 +1009,20 @@
             <h2>Tag 'option'</h2>
             <p></p>
         </section>
-        <section id="tag_optgroup"><!---->
+        <section id="tag_optgroup"><!--
+            <select>
+                <optgroup label="Front-end">
+                    <option>HTML</option>
+                    <option>CSS</option>
+                    <option>JavaScript</option>
+                </optgroup>
+                <optgroup label="Back-end">
+                    <option>PHP</option>
+                    <option>Node.js</option>
+                    <option>MySQL</option>
+                </optgroup>
+            </select>
+        -->
             <h2>Tag 'optgroup'</h2>
             <p></p>
         </section>
@@ -1011,7 +1030,9 @@
             <h2>Tag 'datalist'</h2>
             <p></p>
         </section>
-        <section id="tag_textarea"><!---->
+        <section id="tag_textarea"><!--
+            <textarea name="mensagem" cols="30" rows="10"></textarea>
+        -->
             <h2>Tag 'textarea'</h2>
             <p></p>
         </section>
@@ -1019,32 +1040,185 @@
             <h2>Tag 'dialog'</h2>
             <p></p>
         </section>
-        <section id="tag_output"><!---->
+        <section id="tag_output"><!--
+            <form oninput="c.value=parseInt(a.value) + parseInt(b.value)">0
+                <input type="range" id="a" value="0" min="0" max="10">10
+                +<input type="number" id="b" value="0">
+                =<output name="c" for="a b">0</output>
+            </form>
+        -->
             <h2>Tag 'output'</h2>
             <p></p>
         </section>
-        <section id="tag_meter"><!---->
+        <section id="tag_meter"><!--
+            <meter value="2" min="0" max="10">2 out of 10</meter><br>
+            <meter value="0.6">60%</meter>
+        -->
             <h2>Tag 'meter'</h2>
             <p></p>
         </section>
-        <section id="tag_progress"><!---->
+        <section id="tag_progress"><!--
+                <progress value="50" max="100"></progress>
+        -->
             <h2>Tag 'progress'</h2>
             <p></p>
         </section>
-        <section id="tag_canvas"><!---->
+        <section id="tag_canvas"><!--
+            <canvas id="meu-canvas" width="500" height="500"></canvas>
+            <script>
+                const canvasEl = document.querySelector('#meu-canvas');
+                const context = canvasEl.getContext('2d');
+
+                context.fillStyle = '#000000';
+                context.fillRect(0, 0, 100, 100);
+            </script>
+        -->
             <h2>Tag 'canvas'</h2>
             <p></p>
         </section>
-        <section id="tag_svg"><!---->
+        <section id="tag_svg"><!--
+            <svg width="100" height="100">
+                <circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" />
+            </svg>
+
+            <img src="images/circle.png">
+
+            <img src="images/circle.svg">
+
+            <img src="images/logo.svg">
+        -->
             <h2>Tag 'svg'</h2>
             <p></p>
         </section>
-        <section id="tag_hgroup"><!---->
+        <section id="tag_hgroup"><!--
+            section {
+                max-width: 500px;
+                margin: 0 auto;
+            }
+            hgroup {
+                text-align: right;
+                font-family: Verdana, sans-serif;
+                padding-right: 16px;
+                border-right: 10px solid #f37520;
+            }
+
+            h1 {
+                font-size: 1.93rem;
+                margin-bottom: 0;
+            }
+
+            h2 {
+                font-size: 1.16rem;
+                margin-top: 0;
+            }
+
+            p {
+                text-align: justify;
+                font-family: Georgia, serif;
+                font-size: .95rem;
+            }
+
+            .first::first-letter {
+                font-size: 3.2rem;
+                line-height: .7;
+                float: left;
+                padding-right: 8px;
+                padding-top: 4px;
+            }
+            </style>
+            
+            <section>
+                <hgroup>
+                    <h1>HTML 5</h1>
+                    <h2>Introdução</h2>
+                </hgroup>
+                <p class="first">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et aspernatur accusantium ipsam aliquid omnis eaque dolore sint id rem, optio tempore! Recusandae nihil delectus deserunt cupiditate. Rerum blanditiis rem a?</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et aspernatur accusantium ipsam aliquid omnis eaque dolore sint id rem, optio tempore! Recusandae nihil delectus deserunt cupiditate. Rerum blanditiis rem a?</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et aspernatur accusantium ipsam aliquid omnis eaque dolore sint id rem, optio tempore! Recusandae nihil delectus deserunt cupiditate. Rerum blanditiis rem a?</p>
+            </section>
+        -->
             <h2>Tag 'hgroup'</h2>
             <p></p>
         </section>
-        <section id="tag_marquee"><!---->
+        <section id="tag_marquee"><!--
+            <marquee>Hcode Treinamentos</marquee>
+
+            <marquee direction="up">Hcode Treinamentos</marquee>
+            
+            <marquee direction="down" width="250" height="200" behavior="alternate" style="border:solid">
+                <marquee behavior="alternate">
+                    Hcode Treinamentos
+                </marquee>
+            </marquee>
+        -->
             <h2>Tag 'marquee'</h2>
+            <p></p>
+        </section>
+        <section id="tag_rp"><!--
+
+        -->
+            <h2>Tag 'rp'</h2>
+            <p></p>
+        </section>
+        <section id="tag_td-colspan-rowspan"><!--
+            <style>
+                td {
+                    border: #CCC 1px solid;
+                    padding: 1em;
+            }
+            </style>
+            <table>
+
+                <tr>
+                    <td colspan="3">A1 - A3</td>
+                </tr>
+
+                <tr>
+                    <td>B1</td>
+                    <td>B2</td>
+                    <td rowspan="2">B3</td>
+                </tr>
+
+                <tr>
+                    <td>C1</td>
+                    <td>C2</td>
+                </tr>
+
+            </table>
+        -->
+            <h2>Tag 'td-colspan-rowspan</h2>
+            <p></p>
+        </section>
+        <section id="tag_td-headers"><!--
+            <table>
+
+                <tr>
+                    <th id="name">Nome</th>
+                    <th id="email">E-mail</th>
+                    <th id="phone">Telefone</th>
+                </tr>
+
+                <tr>
+                    <td headers="name">Joao</td>
+                    <td headers="email">joao@hcode.com.br</td>
+                    <td headers="phone">11912345678</td>
+                </tr>
+
+                <tr>
+                    <td headers="name">Glaucio</td>
+                    <td headers="email">glaucio@hcode.com.br</td>
+                    <td headers="phone">11912345678</td>
+                </tr>
+
+                <tr>
+                    <td headers="name">Djalma</td>
+                    <td headers="email">djalma@hcode.com.br</td>
+                    <td headers="phone">11912345678</td>
+                </tr>
+
+            </table>
+        -->
+            <h2>Tag 'td-headers'</h2>
             <p></p>
         </section>
     </main>
