@@ -140,67 +140,246 @@
             <h2>Tag 'object'</h2>
             <p>Tag usada para definir um objeto incorporado no doc. É possivel incorporar audio, video, applets java activex, pdf e etc. Tabem é possivel passar parametros usando a tag 'param' que será vista mais a frente.</p>
         </section>
-        <section id="tag_param"><!---->
+        <section id="tag_param"><!--
+            <object data="pdf/tag_object.pdf#page3" type="?" width="600" height="600">
+                <param name="Page" value="3">
+            </object>            
+        -->
             <h2>Tag 'param'</h2>
             <p></p>
         </section>
-        <section id="tag_base"><!---->
+        <section id="tag_base"><!--
+             <base href="https://www.hcode.com.br" target="_blank">
+
+             <a href="/#/contato">Contato</a>
+        -->
             <h2>Tag 'base'</h2>
             <p></p>
         </section>
-        <section id="tag_iframe"><!---->
+        <section id="tag_iframe"><!--
+            <h1>Iframe</h1>
+
+            <iframe src="embed.html" width="1024" height="768"></iframe>
+        -->
             <h2>Tag 'iframe'</h2>
             <p></p>
         </section>
-        <section id="tag_a"><!---->
+        <section id="tag_a"><!--
+            <style>
+                a:link {
+                    color: red;
+                }
+                a:visited {
+                    color: green;
+                }
+                a:focus {
+                    color: blue;
+                }
+                a:active {
+                    color: orange;
+                }
+                a {
+                    text-decoration: none;
+                }
+                iframe {
+                    width: 300px;
+                    height: 300px;
+                    display: block;
+                }
+                img {
+                    width: 64px;
+                }
+            </style>
+
+                <a href="images/logo.png">Logo Hcode</a>
+
+            <a href="images/logo.png" download="hcode.png">Download Logo Hcode</a>
+
+            <a href="https://youtube.com/c/hcodebrasil" hreflang="pt">Canal da Hcode</a>
+
+            <a href="https://youtube.com/c/hcodebrasil" target="_blank">Blank</a>
+
+            <a href="comments.html" target="webview">Abrir no Iframe</a>
+
+            <iframe name="webview"></iframe>
+
+            <a href="https://www.hcode.com.br">
+                <img src="images/logo.png">
+            </a>
+
+            <a href="mailto:contato@hcode.com.br">Entre em contato</a>
+
+            <a href="mailto:contato@hcode.com.br?subject=Curso Completo de HTML5 da Hcode">Com assunto</a>
+
+            <a href="mailto:contato@hcode.com.br?subject=Curso Completo de HTML5 da Hcode&cc=pramim@gmail.com&bcc=copia@gmail.com&body=Olá, tudo bem">E-mail Completo</a>
+
+            <a href="tel:+551121497360">Telefone</a>
+
+            <a href="javascript:alert('Hello')">Hello!</a>
+        -->
             <h2>Tag 'a'</h2>
             <p></p>
         </section>
-        <section id="tag_img"><!---->
+        <section id="tag_img"><!--
+            <img src="images/logo.png" alt="Logo Hcode">
+
+            <img src="images/logo.png" alt="Logo Hcode" width="100" height="100">
+
+            <a href="http://127.0.0.1:3000/ismap">
+             <img src="images/logo.png" alt="Logo Hcode" width="100" height="100" ismap>
+            </a>
+
+            <img src="images/logo.png" alt="Logo Hcode" longdesc="#logoDescription">
+
+            <div id="logoDescription">
+                <h2>Image logo.png</h2>
+                <p>Logotipo da Hcode Treinamentos</p>
+            </div>
+        -->
             <h2>Tag 'img'</h2>
             <p></p>
         </section>
-        <section id="tag_figure"><!---->
+        <section id="tag_figure"><!--
+            <figure>
+                <img src="images/logo.png" alt="Logo Hcode">
+                <figcaption>Logotipo da Hcode</figcaption>
+            </figure>
+        -->
             <h2>Tag 'figure'</h2>
             <p></p>
         </section>
-        <section id="tag_figcaption"><!---->
+        <section id="tag_figcaption"><!--
+            <figure>
+                <img src="images/logo.png" alt="Logo Hcode">
+                <figcaption>Logotipo da Hcode</figcaption>
+            </figure>
+        -->
             <h2>Tag 'figcaption'</h2>
             <p></p>
         </section>
-        <section id="tag_audio"><!---->
+        <section id="tag_audio"><!--
+            <audio src="audios/How_it_Began.mp3" controls></audio>
+        -->
             <h2>Tag 'audio'</h2>
             <p></p>
         </section>
-        <section id="tag_video"><!---->
+        <section id="tag_video"><!--
+            <style>
+                video {
+                    width: 100%;
+                }
+            </style>
+
+            <video src="videos/AV1_trailer.mp4" controls></video>
+        -->
             <h2>Tag 'video'</h2>
             <p></p>
         </section>
-        <section id="tag_source"><!---->
+        <section id="tag_source"><!--
+             <picture>
+                <source media="(min-width: 512px)" srcset="images/logo.png">
+                <source media="(min-width: 256px)" srcset="images/logo256.png">
+                <img src="images/logo64.png" alt="Logo">
+            </picture>
+
+            <audio controls>
+                <source src="audios/How_it_Began.mp3" type="audio/mpeg">
+                <source src="audios/How_it_Began.ogg" type="audio/ogg">
+                Seu navegador não suporte a tag audio.
+            </audio>
+        -->
             <h2>Tag 'source'</h2>
             <p></p>
         </section>
-        <section id="tag_picture"><!---->
+        <section id="tag_picture"><!--
+            <picture>
+                <source media="(min-width: 512px)" srcset="images/logo.png">
+                <source media="(min-width: 256px)" srcset="images/logo256.png">
+                <img src="images/logo64.png" alt="Logo">
+            </picture>
+        -->
             <h2>Tag 'picture'</h2>
             <p></p>
         </section>
-        <section id="tag_track"><!---->
+        <section id="tag_track"><!--
+            <style>
+                video {
+                    width: 100%;
+            }
+            </style>
+
+            <video src="videos/AV1_trailer.mp4" controls>
+                <track label="Português do Brasil" src="tracks/AV1_trailer_pt.vtt" kind="subtitles" srclang="pt">
+                <track label="Japones" src="tracks/AV1_trailer_jp.vtt" kind="subtitles" srclang="jp">
+            </video>
+        -->
             <h2>Tag 'track'</h2>
             <p></p>
         </section>
-        <section id="tag_table"><!---->
+        <section id="tag_table"><!--
+            <table>
+        
+                <tr>
+                    <td>A1</td>
+                    <td>A2</td>
+                    <td>A3</td>
+                </tr>
+
+                <tr>
+                    <td>B1</td>
+                    <td>B2</td>
+                    <td>B3</td>
+                </tr>
+
+                <tr>
+                    <td>C1</td>
+                    <td>C2</td>
+                    <td>C3</td>
+                </tr>
+
+            </table>
+        -->
             <h2>Tag 'table'</h2>
             <p></p>
         </section>
-        <section id="tag_tr"><!---->
-            <h2>Tag 'tr'</h2>
-            <p></p>
-        </section>
-        <section id="tag_td"><!---->
-            <h2>Tag 'td'</h2>
-            <p></p>
-        </section>
-        <section id="tag_thead"><!---->
+        <section id="tag_thead"><!--
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>Descrição</th>
+                        <th>Qtd.</th>
+                        <th>Preço</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>Camiseta M</td>
+                        <td>1</td>
+                        <td>R$59,90</td>
+                        <td>R$59,90</td>
+                    </tr>
+                    <tr>
+                        <td>Caneca JavaScript</td>
+                        <td>2</td>
+                        <td>R$49,90</td>
+                        <td>R$99,80</td>
+                    </tr>
+                </tbody>
+
+                <tfoot>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td>3</td>
+                        <td colspan="2">R$159,70</td>
+                    </tr>
+                </tfoot>
+
+            </table>
+
+        -->
             <h2>Tag 'thead'</h2>
             <p></p>
         </section>
@@ -212,15 +391,87 @@
             <h2>Tag 'tfoot'</h2>
             <p></p>
         </section>
-        <section id="tag_th"><!---->
+        <section id="tag_th"><!--
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>Descrição</th>
+                        <th>Qtd.</th>
+                        <th>Preço</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>Camiseta M</td>
+                        <td>1</td>
+                        <td>R$59,90</td>
+                        <td>R$59,90</td>
+                    </tr>
+                    <tr>
+                        <td>Caneca JavaScript</td>
+                        <td>2</td>
+                        <td>R$49,90</td>
+                        <td>R$99,80</td>
+                    </tr>
+                </tbody>
+
+                <tfoot>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td>3</td>
+                        <td colspan="2">R$159,70</td>
+                    </tr>
+                </tfoot>
+
+    </table>
+        -->
             <h2>Tag 'th'</h2>
             <p></p>
         </section>
-        <section id="tag_template"><!---->
+        <section id="tag_template"><!--
+          <template id="tpl-produto">
+                <tr>
+                    <td>Camiseta M</td>
+                    <td>1</td>
+                    <td class="real">59,90</td>
+                    <td class="real">59,90</td>
+                </tr>
+            </template>
+        -->
             <h2>Tag 'template'</h2>
             <p></p>
         </section>
-        <section id="tag_colgroup"><!---->
+        <section id="tag_colgroup"><!--
+                <table>
+        
+                    <colgroup>
+                        <col span="2" style="background-color:red">
+                        <col style="background-color:yellow">
+                    </colgroup>
+
+                    <tr>
+                        <td>A1</td>
+                        <td>A2</td>
+                        <td>A3</td>
+                    </tr>
+
+                    <tr>
+                        <td>B1</td>
+                        <td>B2</td>
+                        <td>B3</td>
+                    </tr>
+
+                    <tr>
+                        <td>C1</td>
+                        <td>C2</td>
+                        <td>C3</td>
+                    </tr>
+
+                </table>
+        -->
             <h2>Tag 'colgroup'</h2>
             <p></p>
         </section>
