@@ -120,6 +120,11 @@
         <section id="tag_noscript"><!---->
             <h2>Tag 'noscript'</h2>
             <p>A tag define um conteudo alternativo para uruarios que desativarem scripts no navegador ou quando os scripts não forem suportados. Nesse caso ira mostrar somente o html eu estiver dentro dessa tag, tambem é possivel definir estilos de css especificamente para esses casos.</p>
+
+            <noscript>
+                <p>seu navegardor não suporta javascript</p>
+            </noscript>
+
         </section>
         <section id="tag_embad"><!--
             abre e fecha; style: outline: none.
@@ -127,34 +132,51 @@
             src: caminho
             type:tipo
             width: largura
-
-            <embed src="swf/dragracer.swf" type="application/x-shockwave-flash" width="1024" height="768">
         -->
             <h2>Tag 'embad'</h2>
             <p>Usada para definir um conteudo externo embutido que será reproduzido dentro de um quadro dentro do doc.</p>
+
+            <embed src="swf/dragracer.swf" type="application/x-shockwave-flash" width="1024" height="768"></embed>
+
         </section>
         <section id="tag_object"><!--
-            <object width="600" height="600" data="pdf/Tag_ object.pdf"></object>
-
+            suporta todos os atr global /tem atrs proprios:
+            data: define o caminho do recurso que será usado;
+            form: ela pode ser usada dentro de um formulario;
+            name: define um nome para o objeto;
+            heigth: altura;
+            width; langura/
+            type: qual o tipo de arquivo;
+            map: pode se fazer uma mapa dendro do objeto.
         -->
             <h2>Tag 'object'</h2>
             <p>Tag usada para definir um objeto incorporado no doc. É possivel incorporar audio, video, applets java activex, pdf e etc. Tabem é possivel passar parametros usando a tag 'param' que será vista mais a frente.</p>
+
+            <object data="pdf/Tag_ object.pdf" type="application/pdf" width="600" height="600"></object>
         </section>
         <section id="tag_param"><!--
-            <object data="pdf/tag_object.pdf#page3" type="?" width="600" height="600">
-                <param name="Page" value="3">
-            </object>            
+            Possui todos os atr global /a atr proprio:
+            name: nome do recurso;
+            value: o valor do recurso            
         -->
             <h2>Tag 'param'</h2>
-            <p></p>
+            <p>Serve para passar parametros adicinais, geralmente, para a tag object. </p>
+
+            <object data="pdf/Tag_ object.pdf#page3" type="application/pdf" width="600" height="800">
+                <param name="Page" value="3">
+            </object>
+
         </section>
         <section id="tag_base"><!--
-             <base href="https://www.hcode.com.br" target="_blank">
+            todos atr global;
+            atr href: define o alvo;
+            atr target: especifica onde será aberto;
+            <base href="https://www.hcode.com.br" target="_blank">
 
-             <a href="/#/contato">Contato</a>
+            <a href="/#/contato">Contato</a>
         -->
             <h2>Tag 'base'</h2>
-            <p></p>
+            <p>É usada para definir uma URL ou domnio padrão dentro do doc. Séra uasdo como base, para todos os links dentro do documento html, o link ou dominio que for declado no tag base. incluindo se será aberto em nova página ou não. só pode haver 1 tag base no doc e sempre deve estar acomphada do seu 'href:' onde será fornecido a URL padrão</p>
         </section>
         <section id="tag_iframe"><!--
             <h1>Iframe</h1>
@@ -163,6 +185,7 @@
         -->
             <h2>Tag 'iframe'</h2>
             <p></p>
+            
         </section>
         <section id="tag_a"><!--
             <style>
