@@ -194,60 +194,39 @@
             <iframe src="../atributos/atributos.html" width="768" height="600"></iframe>
         </section>
         <section id="tag_a"><!--
-            <style>
-                a:link {
-                    color: red;
-                }
-                a:visited {
-                    color: green;
-                }
-                a:focus {
-                    color: blue;
-                }
-                a:active {
-                    color: orange;
-                }
-                a {
-                    text-decoration: none;
-                }
-                iframe {
-                    width: 300px;
-                    height: 300px;
-                    display: block;
-                }
-                img {
-                    width: 64px;
-                }
-            </style>
+            Possui todos os atr global / e atrs proprios:
+            dowload: define que ao inves de abrir, o navegador baixe o arquivo;
+            href: define o caminho do doc ou arquivo que será lincado(URL);
+            hreflang: linguagem do arquivo que esta sendo chamado(ex. 'pt-br');
+            media: define o dispositivo do link de destino(media query);
+            ping: Endereço de rastreio para monitorar cliques no link de destino(URL);
+            referrerpolicy: define qual referencia enviar(no-referrer, no-referrer-when-downgrade, origin, origin-when-cross-origni, unsafe-url);
+            rel: define o relacionamento do link que esta sendo chamado, com o doc atual( alternate, author, bookmark, external, help, license, next, nofollow, norerrer, noopener, prev, search, tag);
+            [target]: define onde será aberto( _blank, _paret, _self, _top, nome de um frame);
+            [type]: define o formato do arquivo que será utilizado(nome do tipo);
+            [identificadores]: URI(file, mailto e javascript);
 
-                <a href="images/logo.png">Logo Hcode</a>
-
-            <a href="images/logo.png" download="hcode.png">Download Logo Hcode</a>
-
-            <a href="https://youtube.com/c/hcodebrasil" hreflang="pt">Canal da Hcode</a>
-
-            <a href="https://youtube.com/c/hcodebrasil" target="_blank">Blank</a>
-
-            <a href="comments.html" target="webview">Abrir no Iframe</a>
-
-            <iframe name="webview"></iframe>
-
-            <a href="https://www.hcode.com.br">
-                <img src="images/logo.png">
-            </a>
-
-            <a href="mailto:contato@hcode.com.br">Entre em contato</a>
-
-            <a href="mailto:contato@hcode.com.br?subject=Curso Completo de HTML5 da Hcode">Com assunto</a>
-
-            <a href="mailto:contato@hcode.com.br?subject=Curso Completo de HTML5 da Hcode&cc=pramim@gmail.com&bcc=copia@gmail.com&body=Olá, tudo bem">E-mail Completo</a>
-
-            <a href="tel:+551121497360">Telefone</a>
-
-            <a href="javascript:alert('Hello')">Hello!</a>
+            style: ps[link]: color(blue), text-decoration(underline), corse(pointer); ps[visited]: color(55815b); ps[active]: color(red);
         -->
             <h2>Tag 'a'</h2>
-            <p></p>
+            <p>Essa tag é usada para fazer uma ancora (link) para outra página, recurso ou até mesmo um download. o atributo mais usado é o 'href'.o conteudo da tag é mostrado sublinhado.</p>
+
+            <div><a href="#"><img src="images/logo.png" alt="Imagen logo" style="height: 200px; width: 200px;"></a></div>
+            <div>
+                <a href="comments.html" target="webview">Abrir no frame</a>
+                <iframe name="webview"></iframe>
+            </div>
+            <ul>
+                <li><a href="images/logo.png">Logo</a></li>
+                <li><a href="images/logo.png" download="hcode.png">Download logo</a></li>
+                <li><a href="#" hreflang="pt-br">Canal</a></li>
+                <li><a href="#" target="_blank">Nova pagina</a></li>
+                <li><a href="mailto:contado@hydrahtec.com">Entre em contato</a></li>
+                <li><a href="mailto:contato@hydrahtec.com?subject=Curso de HTML 5 Completo">email Com assunto</a></li>
+                <li><a href="mailto:contato@hydrahtec.com?subject=Curso de HTML 5 Completo&cc=pramin@gmail.com&copia@gmail.com&body=Olá, tudo bem">Email com copia</a></li>
+                <li><a href="tel:+551121497360">Telefone</a></li>
+                <li><a href="javascript:alert('Hello')">Hello!</a></li>
+            </ul>
         </section>
         <section id="tag_img"><!--
             <img src="images/logo.png" alt="Logo Hcode">
