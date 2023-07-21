@@ -230,7 +230,16 @@
         </section>
         <section id="tag_img"><!--
             só abre / possui todos os atr global / e atrs priprios:
-            []:;
+            [alt]:Define um texto alternativo para a imagem(text);
+            [crossorigin]: Define como o elemento lida com solicitações de origem cruzada(anonumus, use-credentials);
+            [heigth]: Define a altura da imagem(numero);
+            [ismap]: Define a imagem como um mapa de imagem do lado do servidor(ismap);
+            [longdes]: Define uma descrição detalhada da imagem( o valor desse atr deve ser um 'id'=#id(nome), esse id deve ser colocado no elemento onde estiver a descrição da imagem: 'div' ou 'p');
+            [sizes]: Define tamanhos alternativos da imagem();
+            [src]: Define qual a fonte/link da imagem(URL);
+            [srcset]: Define a URL da imagem em diferentes situações(URL);
+            [usemap]: Define a imagem como um mapa de imagem do lado do usuario(#nomedomapa);
+            [width]: Define a largura da imagem(numero);
         -->
             <h2>Tag 'img'</h2>
             <p>É usada para inserir imagens na página. Os atributos 'src' e 'alt' são obrigatórios.</p>
@@ -251,13 +260,15 @@
 
         </section>
         <section id="tag_figure"><!--
+            abre e fecha / atr global / style: dispaly(block), margin(1em 40px)
+            não é uma imagem comun. trata-se de uma ilustração por isso deve-se usar a tag 'figcaption' para dar uma breve descrição dela
+        -->
+            <h2>Tag 'figure'</h2>
+            <p>É usada para definir uma foto, ilustração, diagrama e e tc.</p>
             <figure>
                 <img src="images/logo.png" alt="Logo Hcode">
                 <figcaption>Logotipo da Hcode</figcaption>
             </figure>
-        -->
-            <h2>Tag 'figure'</h2>
-            <p></p>
         </section>
         <section id="tag_figcaption"><!--
             <figure>
@@ -266,28 +277,40 @@
             </figure>
         -->
             <h2>Tag 'figcaption'</h2>
-            <p></p>
+            <p>Essa tag define uma breve descrição para a ilustração dentro da tag 'figure'</p>
         </section>
         <section id="tag_audio"><!--
-            <audio src="audios/How_it_Began.mp3" controls></audio>
+            atr global / atr especifico:
+            [autoplay]: Começa a reproduzir assim que os dados do audio estiverem carregados(autoplay);
+            [controls]: Habilita os controles de reprodução do audio;
+            [loop]: Define se o audio deve começar novamente apos terminar;
+            [muted]: Define o volume do audio como mutado;
+            [preload]: Define como o audio deve ser carregada quando a página é carregada(auto, metadata, none);
         -->
             <h2>Tag 'audio'</h2>
-            <p></p>
+            <p>É usado para definir uma musica, son, ou transmição de audio. atualmente suporta os formatos MP3, WAV e OGG. Qualquer texto no conteudo da tag seá exibido em navegadores que não suportam o uso da tag 'audio'.</p>
+            <audio src="audios/How_it_Began.mp3" controls loop muted preload="metadata"></audio>
+            
         </section>
         <section id="tag_video"><!--
-            <style>
-                video {
-                    width: 100%;
-                }
-            </style>
-
-            <video src="videos/AV1_trailer.mp4" controls></video>
+            atr global / atr proprio(autoplay, controls, loop, muted, preload, src):
+            [poster]: Define uma imagen para ser exibida enquanto o video estiver sendo carregado ou antes do usuario clicar em reproduzir(URL);
+            [heigth]: Define a altura do player(numero);
+            [width]: Define a largura do player(numero);
         -->
             <h2>Tag 'video'</h2>
-            <p></p>
+            <p>É usada para definir um video, filme, ou transmissão de video. atualmente suporta os formatos MP4, WEBM e OGG. Qaulquer texto no conteudo da tag, será exibido se o navegador não surportar a tag 'video'.</p>
+            <video src="videos/AV1_trailer.mp4" controls preload="metadata" height="600" width="750" poster="images/logo.png"></video>
+
         </section>
         <section id="tag_source"><!--
-             <picture>
+           atr global / atr proprio:
+             
+        -->
+            <h2>Tag 'source'</h2>
+            <p></p>
+
+            <picture>
                 <source media="(min-width: 512px)" srcset="images/logo.png">
                 <source media="(min-width: 256px)" srcset="images/logo256.png">
                 <img src="images/logo64.png" alt="Logo">
@@ -298,9 +321,7 @@
                 <source src="audios/How_it_Began.ogg" type="audio/ogg">
                 Seu navegador não suporte a tag audio.
             </audio>
-        -->
-            <h2>Tag 'source'</h2>
-            <p></p>
+
         </section>
         <section id="tag_picture"><!--
             <picture>
