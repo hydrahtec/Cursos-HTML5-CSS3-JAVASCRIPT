@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="../hcode.css">
     <link rel="shortcut icon" href="../image/nerd.ico" type="image/x-icon">
     <title>Tags em HTML 5</title>
+    <link rel="stylesheet" href="table.css">
 </head>
 <body><!--corpo da pagina /abre+fecha / todas as tag serão filhas dela /todos os atr globais /style: dispaly block; margin 8px; outline none-->
     <header><!---->
@@ -304,11 +305,15 @@
 
         </section>
         <section id="tag_source"><!--
-           atr global / atr proprio:
-             
+           styl: nenhum / atr global / atr proprio: 
+           [src]: Define a fonte externa do source(url);
+           [srcset]: Define uma fonte em situações diferentes(url);
+           [media]: Define em que tipo de midia essa fonte de dados se aplica(tipo de midia - o valor pode ser expresso como lg min ou lg max do device);
+           [sizes]: Degine tamanhos diferentes;
+           [type]: Define o tipo de midia do arquivo;             
         -->
             <h2>Tag 'source'</h2>
-            <p></p>
+            <p>Éssa tag é usada para definir varias fontes de midia. Geralmente é usado em cojnunto as tags 'picture' e 'audio'</p>
 
             <picture>
                 <source media="(min-width: 512px)" srcset="images/logo.png">
@@ -324,55 +329,65 @@
 
         </section>
         <section id="tag_picture"><!--
+            abre e fecha / 
+        -->
+            <h2>Tag 'picture'</h2>
+            <p>É usada para definir mais de uma fonte de imagem. Normalmente usada para mostrar imagens de acordo.</p>
             <picture>
                 <source media="(min-width: 512px)" srcset="images/logo.png">
                 <source media="(min-width: 256px)" srcset="images/logo256.png">
                 <img src="images/logo64.png" alt="Logo">
             </picture>
-        -->
-            <h2>Tag 'picture'</h2>
-            <p></p>
+
         </section>
         <section id="tag_track"><!--
+            style: / atr global / atr proprio:
+            [default]: Define se esta é a faixa selecionada por padrão(default);
+            [kind]: Define o tipo de faixa de texto(captions, chapters, description, metadata, subtitle);
+            [label]: Define o rotulo da faixa de texto(NomeDoImput.dir);
+            [srclang]: Define qual é a linguagem dos dados da faixa de texto. Obrigatótio para legendas(código de linguagens);
+
             <style>
                 video {
                     width: 100%;
             }
             </style>
+        -->
+            <h2>Tag 'track'</h2>
+            <p>É usada para definir uma faixa de text em uma tag de midia. Normalmente usada para definir legendas em videos.</p>
 
-            <video src="videos/AV1_trailer.mp4" controls>
+            <video width="600" height="600" muted preload="metadata" src="videos/AV1_trailer.mp4" controls>
                 <track label="Português do Brasil" src="tracks/AV1_trailer_pt.vtt" kind="subtitles" srclang="pt">
                 <track label="Japones" src="tracks/AV1_trailer_jp.vtt" kind="subtitles" srclang="jp">
             </video>
-        -->
-            <h2>Tag 'track'</h2>
-            <p></p>
+
         </section>
         <section id="tag_table"><!--
-            <table>
-        
-                <tr>
-                    <td>A1</td>
-                    <td>A2</td>
-                    <td>A3</td>
-                </tr>
-
-                <tr>
-                    <td>B1</td>
-                    <td>B2</td>
-                    <td>B3</td>
-                </tr>
-
-                <tr>
-                    <td>C1</td>
-                    <td>C2</td>
-                    <td>C3</td>
-                </tr>
-
-            </table>
+            Style: display: table; border-colapse: separate; border-spacing: 2px; border-color: gray; / abre e fecha / atr global
+            'tr': Representam as linhas da tabela.
+            'td': Representam as colunas da tabela.
         -->
             <h2>Tag 'table'</h2>
-            <p></p>
+            <p>É usada para definir uma tabela. Não possui atributos prorpios. Apenas a tag table não cria toda a tabela. <br>É necessario usar as tags '<spam class="laranja">tr</spam>' e '<spam class="laranja">td</spam>' para criar as <strong>linhas</strong> e as <strong>celulas</strong>. Uma tabela mais complexa ainda pode conter as tags '<spam class="laranja">caption</spam>' '<spam class="laranja">col</spam>', '<spam class="laranja">colgroup</spam>', '<spam class="laranja">thead</spam>', '<spam class="laranja">tfoot</spam>' e '<spam class="laranja">tdody</spam>'. <br> Historicamente as tabelas eram usadas para criar a layout pa página, porem esse seria um mal uso desta tag
+            </p>
+
+            <table>
+                <tr>
+                    <td>A1</td>
+                    <td>B1</td>
+                    <td>C1</td>
+                </tr>
+                <tr>
+                    <td>A2</td>
+                    <td>B2</td>
+                    <td>C2</td>
+                </tr>
+                <tr>
+                    <td>A3</td>
+                    <td>B3</td>
+                    <td>C3</td>
+                </tr>
+            </table>
         </section>
         <section id="tag_thead"><!--
             <table>
