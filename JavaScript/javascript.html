@@ -21,12 +21,57 @@
         <main>
             <section>
                 <h1>Curso JavaScript</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate quasi illo aliquid laborum libero. Commodi dolores ad dolore recusandae quia nihil quaerat consequuntur non fugit, alias sed ab vitae dolor.</p>
+                <p>Essa linguagem de programação é a mais usada no mundo quando o assunto é desenvolvimento de applicações para Web.
+                </p>
             </section>
             <section>
-                <h2>teste</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur molestiae consectetur ipsa corrupti aliquam rem atque, enim fuga ut vero nostrum officiis pariatur expedita. Animi voluptates est doloremque debitis placeat.</p>
+                <h2>Variaveis</h2>
+                <p>Uma varialvel é um espaço reservado na memoria do computador para se armazer informações que serão usadas em algum momento dentro do codigo. As variaveis se devidem em tipos, tambem conhecidos como tipos primitivos.</p>
+                <h3>Importante: </h3>
+                <ol>
+                    <li>Maiusculas e minusculas fazem diferença.</li>
+                    <li>Ao se declarar uma varialvel não é necessario especificar seu tipo, a propria linguagem consegue fazer a definição.</li>
+                    <li>Utilize nomes que tenham a ver com o conteudo que será armazenado.</li>
+                </ol>
+                <h3>Tipos de variaveis (Primitivas)</h3>
+                <ul>
+                    <li><strong>Number</strong></li>
+                    <p>Não distingue valoreres numericos inteiros ou reais (fracionados, positivos ou negativos, essa variavel ingloba tudo)</p>
+                    <ul>
+                        <li><strong>infinity</strong></li>
+                        <li><strong>NaN</strong> - (Significa que o valor não é um número.)</li>
+                        <p></p>
+                    </ul>
+                    <li><strong>String</strong></li>
+                    <p>Trata-se de uma cadeia de caracteres, não necessariamente precisa ser um texto. Exemplo: o CPF é caracterizado como String pois possui alem dos numeros, a presença de pontos e traço.</p>
+                    <ul>
+                        <li><strong>.length</strong> - (Retorna quantos caracteres a string tem.)</li>
+                        <li><strong>.toUpperCase()</strong> - (Converte todos os caracteres para maiusculas)</li>
+                        <li><strong>.toLowerCase()</strong> - (Converte todos os caracteres para minusculas)</li>
+                    </ul>
+                    <li><strong>Bulean</strong></li>
+                    <p>Essa variavel resebe os valores 'verdadeiro' ou 'falso'</p>
+                    <li><strong>Null</strong></li>
+                    <li><strong>Undefined</strong></li>
+                    <li><strong>Object</strong></li>
+                    <ul>
+                        <li><strong>arrey</strong> - ()</li>
+                    </ul>
+                    <li><strong>Function</strong></li>
+                </ul>
+            </section><!--Fim da seção varialvel-->
+            <section>
+                <h2>Conversão de tipos de variaveis</h2>
             </section>
+            <section>
+                <h2>Comandos usados em JavaScript</h2>
+            </section>
+            <section>
+                <h2>Dicas e macetes</h2>
+                <h3><strong>Comendos terminal node js</strong></h3>
+                <p><strong>.exite</strong> - (Comando de saida do terminal)</p>
+                <p><strong>typeof</strong> - (Comando para mostrar qual o tipo de varialvel esta sendo utilizada)</p>                
+                </section>
         </main>
     <footer class="rodape">
         <section class="rodape">
@@ -35,24 +80,6 @@
     </footer>
     <script>
         /*
-        .exite = Sai do terminal;
-        [var]= Variavel (maiusculas e minusculas fazem difernça; utilize nomes coerentes nas variaveis; uma varial é um local na memoria do computador reservado para guardar informçães;quando uma variavel é definida não precisa definir o tipo de var que se trata, a propria linguagem faz a classificação;)
-        ---Tipos primitivos das variaveis:---
-        -[var "number"]= Não distingue valoreres numericos inteiros ou reais (fracionados, positivos ou negativos, essa variavel ingloba tudo);
-            -infinity: ;
-            -NaN: não é um numero;
-        -[var 'string']= cadeia de caracteres (não necessaria mente pode ser um texto. o CPF é um exemplo- contem numeros, pontos e traços);
-            .length: quantos caracteres a string tem;
-            .toUpperCase: converte tudo para maiusculas;
-            .toLowerCase: converte tudo para minusculas;
-        -[var 'bulean']= Essa variavel resebe os valores 'verdadeiro' ou 'falso';
-        -[null]=;
-        -[undefined]=;
-        -[object]=;
-            -arrey:;
-        -[function]=;
-        -typeof: 'tipo de' mostra os tipos das variaveis;
-        ---Fim das variaveis---
         [prompt]= É saudo para fazer uma interação com o usuario, solicitando que ele digite algo( importante lembrar que todo conteudo recebido por ele é salvo com 'string', se quiser receber um numero será necessario converter a variavel para o tipi 'number');
         [conversão de type of var]= 
             Conversão para number: 
@@ -65,6 +92,7 @@
                 'varialvel.toString()': Colocar o valor a ser convertido seguido do comando;
         [+]= Ele pode ser usado como adição ou concatenação (usado para juntar textos com variaveis ou variaveis com variaveis e mostralas na tela). Se o das variaveis forem numeros( será feita adição) se um deles for string (Será feito concatenação);
         */
+       /*
        //exercicio 01
         window.alert("Ola, mundo!"); // mostra uma msg na tela
         window.confirm("Deseja continuar?") // monstra uma msg com botões para confirmação.
@@ -80,8 +108,12 @@
 
         //exercicio 03
         var nome=window.prompt("Digite seu nome")
-        window.alert("Ola, " + nome + " seu nome tem " + nome.length + " letras!!" + " M ," + nome.toUpperCase() + " m " + nome.toLowerCase())
-
+        window.alert("Ola, " + nome + " seu nome tem " + nome.length + " letras!!" + " M ," + nome.toUpperCase() + " m " + nome.toLowerCase())// usar a crese para inserir a versão atualizada do template strings. 
+        
+        //bonus
+        var nome=window.prompt("Digite seu nome: ")
+        Document.write(`Seu nome ${nome} tem ${nome.Length} letras`)
+        */
     </script>
 </body>
 </html>
