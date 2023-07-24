@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="">
+    <meta http-equiv="X-UA-Compatible" content="ie-edge">
     <title>Curso de JavaScript</title>
     <link rel="stylesheet" href="cvjavastyle.css">
     <link rel="shortcut icon" href="../HTML+CSS/exercicios HTML/imagens/nerd.ico" type="image/x-icon">
@@ -33,5 +33,55 @@
             <p>Desenvolvido por Hydrah Technology</p>
         </section>
     </footer>
+    <script>
+        /*
+        .exite = Sai do terminal;
+        [var]= Variavel (maiusculas e minusculas fazem difernça; utilize nomes coerentes nas variaveis; uma varial é um local na memoria do computador reservado para guardar informçães;quando uma variavel é definida não precisa definir o tipo de var que se trata, a propria linguagem faz a classificação;)
+        ---Tipos primitivos das variaveis:---
+        -[var "number"]= Não distingue valoreres numericos inteiros ou reais (fracionados, positivos ou negativos, essa variavel ingloba tudo);
+            -infinity: ;
+            -NaN: não é um numero;
+        -[var 'string']= cadeia de caracteres (não necessaria mente pode ser um texto. o CPF é um exemplo- contem numeros, pontos e traços);
+            .length: quantos caracteres a string tem;
+            .toUpperCase: converte tudo para maiusculas;
+            .toLowerCase: converte tudo para minusculas;
+        -[var 'bulean']= Essa variavel resebe os valores 'verdadeiro' ou 'falso';
+        -[null]=;
+        -[undefined]=;
+        -[object]=;
+            -arrey:;
+        -[function]=;
+        -typeof: 'tipo de' mostra os tipos das variaveis;
+        ---Fim das variaveis---
+        [prompt]= É saudo para fazer uma interação com o usuario, solicitando que ele digite algo( importante lembrar que todo conteudo recebido por ele é salvo com 'string', se quiser receber um numero será necessario converter a variavel para o tipi 'number');
+        [conversão de type of var]= 
+            Conversão para number: 
+                'Number.parseInt(conteudo)': Converte o valor da var par Numero inteiro (o 'N' e o 'I' do name var são maiuculas);
+                'Number.parseFloat(conteudo)': converte o valor para numero real;
+                'Number': o proprio java.. irá fazer a conversão seguindo o tipo de numero(Int ou Float);
+                -obs: se precisar forçar um tipo especifico de numero, usar as opções 1 e 2, se não usar a opção 3;
+            Conversão para string:
+                'String(conteudo)': Converte o valor para string;
+                'varialvel.toString()': Colocar o valor a ser convertido seguido do comando;
+        [+]= Ele pode ser usado como adição ou concatenação (usado para juntar textos com variaveis ou variaveis com variaveis e mostralas na tela). Se o das variaveis forem numeros( será feita adição) se um deles for string (Será feito concatenação);
+        */
+       //exercicio 01
+        window.alert("Ola, mundo!"); // mostra uma msg na tela
+        window.confirm("Deseja continuar?") // monstra uma msg com botões para confirmação.
+        var nome=window.prompt("Qual é seu nome?") // prompt=leia
+        window.alert("É um prazer te conhecer: "+ nome)
+
+        //exercicio 02
+        var n1= Number.parseInt(window.prompt("Digite um numero: ")) // a variavel n1 vai receber o resultado do comando prompt ,convertido pára numero inteiro.
+        var n2=Number.parseFloat(window.prompt("Digito outro numero: "))
+        var n3=Number(window.prompt("Digite mais um numero: "))
+        var s= n1 + n2 + n3 // var s recebe a soma entre n1 + n2 (só será feito a operação soma se as 2 var forem numericas);
+        window.alert('O valor de soma é: ' + s) // + = concatenar / string: esta convertendo o numero para texto
+
+        //exercicio 03
+        var nome=window.prompt("Digite seu nome")
+        window.alert("Ola, " + nome + " seu nome tem " + nome.length + " letras!!" + " M ," + nome.toUpperCase() + " m " + nome.toLowerCase())
+
+    </script>
 </body>
 </html>
