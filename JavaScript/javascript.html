@@ -20,7 +20,7 @@
     </header>
         <main>
             <section>
-                <h1>Curso JavaScript</h1>
+                <h1>JavaScript language</h1>
                 <p>Essa linguagem de programação é a mais usada no mundo quando o assunto é desenvolvimento de applicações para Web. É recomendado que todos os codigo JavaScript estejam localizados dentro da tag script e que essa tag esteja no fim do documento antes do fechamento do corpo da página (/body)</p>
             </section>
             <section>
@@ -43,11 +43,7 @@
                     </ul>
                     <li><strong>String</strong></li>
                     <p>Trata-se de uma cadeia de caracteres, não necessariamente precisa ser um texto. Exemplo: o CPF é caracterizado como String pois possui alem dos numeros, a presença de pontos e traço.</p>
-                    <ul>
-                        <li><strong>.length</strong> - (Retorna quantos caracteres a string tem.)</li>
-                        <li><strong>.toUpperCase()</strong> - (Converte todos os caracteres para maiusculas)</li>
-                        <li><strong>.toLowerCase()</strong> - (Converte todos os caracteres para minusculas)</li>
-                    </ul>
+                    
                     <li><strong>Bulean</strong></li>
                     <p>Essa variavel resebe os valores 'verdadeiro' ou 'falso'</p>
                     <li><strong>Null</strong></li>
@@ -75,17 +71,56 @@
             </section><!--Fim da seção conversão de varialvel-->
             <section>
                 <h2>Manipulação de dados</h2>
-                <h3>Manipulando dados de uma <strong>String</strong></h3>
+                <h3>Manipulando dados <strong>String</strong></h3>
+                <ul>
+                    <li><strong>.length</strong> - (Retorna quantos caracteres a string tem.)</li>
+                    <li><strong>.toUpperCase()</strong> - (Converte todos os caracteres para maiusculas.)</li>
+                    <li><strong>.toLowerCase()</strong> - (Converte todos os caracteres para minusculas)</li>
+                    <li><strong>.replace('a','b')</strong> - (Este comando faz a troca de um elemento por outro)</li>
+                </ul>
+                <h3>Manipulando dados <strong>Number</strong></h3>
+                <ul>
+                    <li><strong>var.toFixed</strong> - (Define a quantidade de casas decimais apos o ponto)</li>
+                    <ul><strong>var.toFixed.replace('.',',')</strong> - (Define a quantidade de casas decimais apos o ponto e troca o ponto pela virgula.)</ul>
+                    <li><strong>var.toLocaleString('pt-br', {style: 'currency', currency: 'BRL/USD/EUR'}).</strong> - (formata o valor numerico como dinheiro; Util para formatos de salario; localiza um tipo de string por região, uma vez definido a lingua e a região, deve-se definir o tipo de formatação (moeda), por fim definir qual tipo de moda (BRL/USD/EUR))</li>
+                    <li><strong></strong> - ()</li>
+                </ul>
+            </section><!--Fim da seção manipulação de dados-->
+            <section>
+                <h2>Operadores</h2>
+                <p></p>
+                <h3>Operadores aritimeticos</h3>
                 <ul>
                     <li></li>
                 </ul>
-            </section><!--Fim da seção manipulação de dados-->
+                <h3>Operadores de atribuição</h3>
+                <ul>
+                    <li></li>
+                </ul>
+                <h3>Operadores relacionais</h3>
+                <ul>
+                    <li></li>
+                </ul>
+                <h3>Operadores lógicos</h3>
+                <ul>
+                    <li></li>
+                </ul>
+                <h3>Operadores ternários</h3>
+                <ul>
+                    <li></li>
+                </ul>
+            </section>
             <section>
                 <h2>Comandos usados em JavaScript</h2>
                 <ul>
                     <li><strong>window.alert</strong> - (Este comando apresenta uma janela no navegador exibindo uam mensagem.)</li>
                     <li><strong>window.confirm</strong> - (Este comando apresenta uma janela no navegador exibindo uma mensagem e botões para o usuario confirmar ou cancelar)</li>
                     <li><strong>window.prompt</strong> - (Este comando é usado para fazer uma interação com o usuario, solicitando que ele digite algo. Uma dica importante é que todo conteudo recebido por esse cando é armazenado na varialvel como tipo <strong>String</strong>, então se precisar trabalhar com valores numericos precisará fazer a conversão do conteudo antes de armazenar na varial.)</li>
+                    <li><strong>document.write(contente)</strong> - (Este comando escreve uma mensagem no corpo da página.)</li>
+                    <ul>
+                        <li><strong>document.writeln(contente)</strong> - (Este comando escreve uma mensagem no corpo da página e pula para linha de baixo)</li>
+                    </ul>
+                    <li></li>
                 </ul>
             </section><!--Fim da seção comandos java-->
             <section>
@@ -94,42 +129,43 @@
                 <h3>Operador [+]</h3>
                 <p>Ele pode agir como <strong>adição</strong> ou <strong>concatenação</strong> (usado para juntar textos com variaveis ou variaveis com variaveis qunado queremos mostralas varios dados na tela). Se o valor de todas as variaveis forem numericos (será realizada a operação de adição) mas se uma das variaveis for do tipo string (Será realizado a concatenação)</p>
 
-                <h3>Metodo novo</h3>
-                <p>Ao inves de usar o operado [+] para concatenar a exibição de textos e variaveis, o que deixa o codigo extenso e poluido, agora é possivel usar um recurso diferente que deixa o codigo mais limpo e organizado. Chama-se '', ele consiste em escrever o conteudo (textos e variaveis) que queremos apresentar ao usuario, todo dentro de uma mesma estrutura: <strong>window.alert(`Texto ${var} texto, ${var} texto texto!!`)</strong>. Neste caso todo o conteudo é posto dentro crases e as variaveis são chamadas conforme a necessidade sem precisar fazer a separação uma da outra, basta colocar as variaveis dentro da estrutura <strong>${}</strong></p>
-                <h3><strong>Comendos terminal node js</strong></h3>
+                <h3>Tamplete strings</h3>
+                <p>Ao inves de usar o operador [+] para concatenar a exibição de textos e variaveis, o que deixa o codigo extenso e poluido, agora é possivel usar um recurso diferente que deixa o codigo mais limpo e organizado. Chama-se <strong>tamplate strings</strong> (ou formatador de strings), ele consiste em escrever o conteudo (textos e variaveis) que queremos apresentar ao usuario, todo dentro de uma mesma estrutura. ex: <strong>window.alert(`Texto ${var} texto, ${var} texto texto!!`)</strong>. Neste caso todo o conteudo é posto dentro crases e as variaveis são chamadas conforme a necessidade sem precisar fazer a separação uma da outra, basta colocar as variaveis dentro da estrutura <strong>${}</strong>.</p>
+                <h3><strong>Comandos terminal node js</strong></h3>
                 <p><strong>.exite</strong> - (Comando de saida do terminal)</p>
                 <p><strong>typeof</strong> - (Comando para mostrar qual o tipo de varialvel esta sendo utilizada)</p>                
                 </section><!--Fim da seção dicas e macetes-->
         </main>
-    <footer class="rodape">
-        <section class="rodape">
-            <p>Desenvolvido por Hydrah Technology</p>
-        </section>
-    </footer>
-    <script>
-       /*
-       //exercicio 01
-        window.alert("Ola, mundo!"); // mostra uma msg na tela
-        window.confirm("Deseja continuar?") // monstra uma msg com botões para confirmação.
-        var nome=window.prompt("Qual é seu nome?") // prompt=leia
-        window.alert("É um prazer te conhecer: "+ nome)
-
+        <script>
+            /*
+            //exercicio 01
+            window.alert("Ola, mundo!"); // mostra uma msg na tela
+            window.confirm("Deseja continuar?") // monstra uma msg com botões para confirmação.
+            var nome=window.prompt("Qual é seu nome?") // prompt=leia
+            window.alert("É um prazer te conhecer: "+ nome)
+            
         //exercicio 02
         var n1= Number.parseInt(window.prompt("Digite um numero: ")) // a variavel n1 vai receber o resultado do comando prompt ,convertido pára numero inteiro.
         var n2=Number.parseFloat(window.prompt("Digito outro numero: "))
         var n3=Number(window.prompt("Digite mais um numero: "))
         var s= n1 + n2 + n3 // var s recebe a soma entre n1 + n2 (só será feito a operação soma se as 2 var forem numericas);
         window.alert('O valor de soma é: ' + s) // + = concatenar / string: esta convertendo o numero para texto
-
+        
         //exercicio 03
         var nome=window.prompt("Digite seu nome")
         window.alert("Ola, " + nome + " seu nome tem " + nome.length + " letras!!" + " M ," + nome.toUpperCase() + " m " + nome.toLowerCase())// usar a crese para inserir a versão atualizada do template strings. 
         
-        //bonus
-        var nome=window.prompt("Digite seu nome: ")
-        Document.write(`Seu nome ${nome} tem ${nome.Length} letras`)
+        //exercicio 04
+        var nome= window.prompt("Digite seu nome: ")
+        document.write(`Seu nome ${nome} tem ${nome.length} letras`)
         */
-
-    </script>
+       //exercicio 05
+       
+       </script>
+       <footer class="rodape">
+           <section class="rodape">
+               <p>Desenvolvido por Hydrah Technology</p>
+           </section>
+       </footer>
 </body>
 </html>
