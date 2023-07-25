@@ -21,8 +21,7 @@
         <main>
             <section>
                 <h1>Curso JavaScript</h1>
-                <p>Essa linguagem de programação é a mais usada no mundo quando o assunto é desenvolvimento de applicações para Web.
-                </p>
+                <p>Essa linguagem de programação é a mais usada no mundo quando o assunto é desenvolvimento de applicações para Web. É recomendado que todos os codigo JavaScript estejam localizados dentro da tag script e que essa tag esteja no fim do documento antes do fechamento do corpo da página (/body)</p>
             </section>
             <section>
                 <h2>Variaveis</h2>
@@ -62,16 +61,45 @@
             </section><!--Fim da seção varialvel-->
             <section>
                 <h2>Conversão de tipos de variaveis</h2>
-            </section>
+                <h3>Conversão String => Number</h3>
+                <ul>
+                    <li><strong>Number.ParseInt(valor)</strong> - (Converte o valor da variavel para Numero inteiro (o 'N' e o 'I' do name var são maiuculas))</li>
+                    <li><strong>Number.ParseFloat(valor)</strong> - (converte o valor para numero real)</li>
+                    <li><strong>Number</strong> - (o proprio JavaScript irá fazer a conversão seguindo o tipo de numero(Int ou Float); obs: se precisar forçar um tipo numerico especifico, use os comandos 1 e 2, se não houver a necessidade, use a opção 3, ela será suficiente)</li>
+                </ul>
+                <h3>Conversão Number => String</h3>
+                <ul>
+                    <li><strong>String(namevar)</strong> - (Converte o valor para o tipo  string)</li>
+                    <li><strong>namevar.toString()</strong> - (Coloque o nome da varialvel seguido do comando.)</li>
+                </ul>
+            </section><!--Fim da seção conversão de varialvel-->
+            <section>
+                <h2>Manipulação de dados</h2>
+                <h3>Manipulando dados de uma <strong>String</strong></h3>
+                <ul>
+                    <li></li>
+                </ul>
+            </section><!--Fim da seção manipulação de dados-->
             <section>
                 <h2>Comandos usados em JavaScript</h2>
-            </section>
+                <ul>
+                    <li><strong>window.alert</strong> - (Este comando apresenta uma janela no navegador exibindo uam mensagem.)</li>
+                    <li><strong>window.confirm</strong> - (Este comando apresenta uma janela no navegador exibindo uma mensagem e botões para o usuario confirmar ou cancelar)</li>
+                    <li><strong>window.prompt</strong> - (Este comando é usado para fazer uma interação com o usuario, solicitando que ele digite algo. Uma dica importante é que todo conteudo recebido por esse cando é armazenado na varialvel como tipo <strong>String</strong>, então se precisar trabalhar com valores numericos precisará fazer a conversão do conteudo antes de armazenar na varial.)</li>
+                </ul>
+            </section><!--Fim da seção comandos java-->
             <section>
                 <h2>Dicas e macetes</h2>
+
+                <h3>Operador [+]</h3>
+                <p>Ele pode agir como <strong>adição</strong> ou <strong>concatenação</strong> (usado para juntar textos com variaveis ou variaveis com variaveis qunado queremos mostralas varios dados na tela). Se o valor de todas as variaveis forem numericos (será realizada a operação de adição) mas se uma das variaveis for do tipo string (Será realizado a concatenação)</p>
+
+                <h3>Metodo novo</h3>
+                <p>Ao inves de usar o operado [+] para concatenar a exibição de textos e variaveis, o que deixa o codigo extenso e poluido, agora é possivel usar um recurso diferente que deixa o codigo mais limpo e organizado. Chama-se '', ele consiste em escrever o conteudo (textos e variaveis) que queremos apresentar ao usuario, todo dentro de uma mesma estrutura: <strong>window.alert(`Texto ${var} texto, ${var} texto texto!!`)</strong>. Neste caso todo o conteudo é posto dentro crases e as variaveis são chamadas conforme a necessidade sem precisar fazer a separação uma da outra, basta colocar as variaveis dentro da estrutura <strong>${}</strong></p>
                 <h3><strong>Comendos terminal node js</strong></h3>
                 <p><strong>.exite</strong> - (Comando de saida do terminal)</p>
                 <p><strong>typeof</strong> - (Comando para mostrar qual o tipo de varialvel esta sendo utilizada)</p>                
-                </section>
+                </section><!--Fim da seção dicas e macetes-->
         </main>
     <footer class="rodape">
         <section class="rodape">
@@ -79,19 +107,6 @@
         </section>
     </footer>
     <script>
-        /*
-        [prompt]= É saudo para fazer uma interação com o usuario, solicitando que ele digite algo( importante lembrar que todo conteudo recebido por ele é salvo com 'string', se quiser receber um numero será necessario converter a variavel para o tipi 'number');
-        [conversão de type of var]= 
-            Conversão para number: 
-                'Number.parseInt(conteudo)': Converte o valor da var par Numero inteiro (o 'N' e o 'I' do name var são maiuculas);
-                'Number.parseFloat(conteudo)': converte o valor para numero real;
-                'Number': o proprio java.. irá fazer a conversão seguindo o tipo de numero(Int ou Float);
-                -obs: se precisar forçar um tipo especifico de numero, usar as opções 1 e 2, se não usar a opção 3;
-            Conversão para string:
-                'String(conteudo)': Converte o valor para string;
-                'varialvel.toString()': Colocar o valor a ser convertido seguido do comando;
-        [+]= Ele pode ser usado como adição ou concatenação (usado para juntar textos com variaveis ou variaveis com variaveis e mostralas na tela). Se o das variaveis forem numeros( será feita adição) se um deles for string (Será feito concatenação);
-        */
        /*
        //exercicio 01
         window.alert("Ola, mundo!"); // mostra uma msg na tela
@@ -114,6 +129,7 @@
         var nome=window.prompt("Digite seu nome: ")
         Document.write(`Seu nome ${nome} tem ${nome.Length} letras`)
         */
+
     </script>
 </body>
 </html>
