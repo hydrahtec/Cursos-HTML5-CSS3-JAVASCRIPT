@@ -83,16 +83,28 @@
                     <li><strong>var.toFixed</strong> - (Define a quantidade de casas decimais apos o ponto)</li>
                     <ul><strong>var.toFixed.replace('.',',')</strong> - (Define a quantidade de casas decimais apos o ponto e troca o ponto pela virgula.)</ul>
                     <li><strong>var.toLocaleString('pt-br', {style: 'currency', currency: 'BRL/USD/EUR'}).</strong> - (formata o valor numerico como dinheiro; Util para formatos de salario; localiza um tipo de string por região, uma vez definido a lingua e a região, deve-se definir o tipo de formatação (moeda), por fim definir qual tipo de moda (BRL/USD/EUR))</li>
-                    <li><strong></strong> - ()</li>
                 </ul>
             </section><!--Fim da seção manipulação de dados-->
             <section>
                 <h2>Operadores</h2>
                 <p></p>
                 <h3>Operadores aritimeticos</h3>
+                <p>Estes operadores são usados para fazer calculos.</p>
                 <ul>
-                    <li></li>
+                    <li><strong>[+]</strong> - (Operador de adição)</li>
+                    <li><strong>[-]</strong> - (Operador de subtração)</li>
+                    <li><strong>[*]</strong> - (Operador de mutiplicação)</li>
+                    <li><strong>[/]</strong> - (Operador de divisão real - contem virgula)</li>
+                    <li><strong>[%]</strong> - (Operador de divisão inteira - sem virgula)</li>
+                    <li><strong>[**]</strong> - (Operador de potenciação)</li>
                 </ul>
+                <h4>Ordem de Precedencia dos operadores aritimeticos</h4>
+                <ol>
+                    <li><strong>[()]</strong>- (Primeiro serão feitos as operações que estiverem entre parenteses.)</li>
+                    <li><strong>[**]</strong> - (Segundo as operações de potenciação.)</li>
+                    <li><strong>[* / %]</strong> - (Terceiro as operações de mutiplicação, divisão real e divisão inteira na ordem que aparecerem na equação.)</li>
+                    <li><strong>[+ -]</strong> - (Quarto serão feitas as operações de soma e subtração.)</li>
+                </ol>
                 <h3>Operadores de atribuição</h3>
                 <ul>
                     <li></li>
@@ -144,23 +156,23 @@
             var nome=window.prompt("Qual é seu nome?") // prompt=leia
             window.alert("É um prazer te conhecer: "+ nome)
             
-        //exercicio 02
-        var n1= Number.parseInt(window.prompt("Digite um numero: ")) // a variavel n1 vai receber o resultado do comando prompt ,convertido pára numero inteiro.
-        var n2=Number.parseFloat(window.prompt("Digito outro numero: "))
-        var n3=Number(window.prompt("Digite mais um numero: "))
-        var s= n1 + n2 + n3 // var s recebe a soma entre n1 + n2 (só será feito a operação soma se as 2 var forem numericas);
-        window.alert('O valor de soma é: ' + s) // + = concatenar / string: esta convertendo o numero para texto
-        
-        //exercicio 03
-        var nome=window.prompt("Digite seu nome")
-        window.alert("Ola, " + nome + " seu nome tem " + nome.length + " letras!!" + " M ," + nome.toUpperCase() + " m " + nome.toLowerCase())// usar a crese para inserir a versão atualizada do template strings. 
-        
-        //exercicio 04
-        var nome= window.prompt("Digite seu nome: ")
-        document.write(`Seu nome ${nome} tem ${nome.length} letras`)
-        */
-       //exercicio 05
-       
+            //exercicio 02
+            var n1= Number.parseInt(window.prompt("Digite um numero: ")) // a variavel n1 vai receber o resultado do comando prompt ,convertido pára numero inteiro.
+            var n2=Number.parseFloat(window.prompt("Digito outro numero: "))
+            var n3=Number(window.prompt("Digite mais um numero: "))
+            var s= n1 + n2 + n3 // var s recebe a soma entre n1 + n2 (só será feito a operação soma se as 2 var forem numericas);
+            window.alert('O valor de soma é: ' + s) // + = concatenar / string: esta convertendo o numero para texto
+            
+            //exercicio 03
+            var nome=window.prompt("Digite seu nome")
+            window.alert("Ola, " + nome + " seu nome tem " + nome.length + " letras!!" + " M ," + nome.toUpperCase() + " m " + nome.toLowerCase())// usar a crese para inserir a versão atualizada do template strings. 
+            
+            //exercicio 04
+            var nome= window.prompt("Digite seu nome: ")
+            document.write(`Seu nome ${nome} tem ${nome.length} letras`)
+            */
+            //exercicio 05
+
        </script>
        <footer class="rodape">
            <section class="rodape">
