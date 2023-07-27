@@ -21,7 +21,7 @@
         <main>
             <section>
                 <h1>JavaScript language</h1>
-                <p>Essa linguagem de programação é a mais usada no mundo quando o assunto é desenvolvimento de applicações para Web. É recomendado que todos os codigo JavaScript estejam localizados dentro da tag script e que essa tag esteja no fim do documento antes do fechamento do corpo da página (/body)</p>
+                <p id="p1">Essa linguagem de programação é a mais usada no mundo quando o assunto é desenvolvimento de applicações para Web. É recomendado que todos os codigo JavaScript estejam localizados dentro da tag script e que essa tag esteja no fim do documento antes do fechamento do corpo da página (/body)</p>
             </section>
             <section>
                 <h2>Variaveis</h2>
@@ -87,7 +87,7 @@
             </section><!--Fim da seção manipulação de dados-->
             <section>
                 <h2>Operadores</h2>
-                <p></p>
+                <p>Os operadores possuem uma ordem de precedencia para serem utilizados, primeiro serão feitas as <strong>operações aritimeticas</strong> depois as <strong>operações relacionais</strong> depois os <strong>operadores lógicos</strong></p>
                 <h3>Operadores aritimeticos</h3>
                 <p>Estes operadores são usados para fazer calculos.</p>
                 <ul>
@@ -106,20 +106,35 @@
                     <li><strong>[+ -]</strong> - (Quarto serão feitas as operações de soma e subtração.)</li>
                 </ol>
                 <h3>Operadores de atribuição</h3>
+                <p></p>
                 <ul>
-                    <li></li>
+                    <li><strong>[=]</strong> - (Operador de atribuição simplies - var a = 5+3; var b= a + 4...)</li>
+                    <li><strong>[n=n+4]</strong>Operador de auto-atribuição. A variavel recebe ela mesma com um incremento.</li>
+                    <li><strong>[+= / -= / *=...]</strong>Opreradores de atribuição simplificada. usado quando a variavel recebe ela mesma com um incremento</li>
+                    <li><strong>[var++ / var--]</strong> - (Esse tipo de operador simplifica o codigo sempre que precisamos acrestar ou retirar 1 ditigo da variavel.)</li>
                 </ul>
                 <h3>Operadores relacionais</h3>
+                <p>Os operadores relacionais tem como retorno padrão valores bulenos: true or false. Numa mesma equação os operadores aritimeticos tem prioridade na ordem de precedencia</p>
                 <ul>
-                    <li></li>
+                    <li><strong>[<]</strong> - (Menor)</li>
+                    <li><strong>[>]</strong> - (Maior)</li>
+                    <li><strong>[<=]</strong> - (Menor ou igual)</li>
+                    <li><strong>[>=]</strong> - (Maior ou igual)</li>
+                    <li><strong>[==]</strong> - (Igual - os valores devem ser iguais mas os tipos podem ser diferentes.)</li>
+                    <li><strong>[!=]</strong> - (Diferente)</li>
+                    <li><strong>[===]</strong> - (Identico - o valor e o tipo devem ser os mesmos.)</li>
                 </ul>
                 <h3>Operadores lógicos</h3>
+                <p>Sua ordem de precedencia é a seguinte: primeiro o NAO, depois o E e por fim o OU (! - && - ||)</p>
                 <ul>
-                    <li></li>
+                    <li><strong>[!]</strong> - (Operador NAO -negação)</li>
+                    <li><strong>[&&]</strong> - (Operador E -Conjunção (binario, os 2 devem ser verdadeiros para ser true))</li>
+                    <li><strong>[||]</strong> - (Operador OU -Disjunção (binario, apenas um lado precisa ser verdadeiro para ser true))</li>
                 </ul>
-                <h3>Operadores ternários</h3>
+                <h3>Operadore ternário</h3>
+                <p>Esse operador possui tres partes.</p>
                 <ul>
-                    <li></li>
+                    <li><strong>[teste '?' (valor se true) ':' (valor se false)]</strong> Realiza o teste, se verdadeiro '?' é usado o primeiro valor, se falso ':' será usado o segundo valor.</li>
                 </ul>
             </section>
             <section>
@@ -135,6 +150,32 @@
                     <li></li>
                 </ul>
             </section><!--Fim da seção comandos java-->
+            <section>
+                <h2>DOM (Document Object Model)</h2>
+                <p>É a versão web do javaScript. Poderosa ferramenta que esta dentro do navegadorar. Um conjunto de objetos para o tratamento de componentes visuais, que auxiliam na criação de applicações.</p>
+                <p>É possivel acessar qualquer elemento da arvore DOM atraves de 5 formas: por <strong>marca</strong>, por <strong>ID</strong>, por <strong>name</strong>, por <strong>class</strong> e por <strong>seletor</strong>.</p>
+                <h3>Selecionando por MARCA</h3>
+                <ul>
+                    <li><strong>[.getElementsByTagName()[0,1,2,3]]</strong> - (Seleciona um elemento pelo nome da tag. Como possivelmente pode haver tags repetidas é possivel indicar a posição que ela se encontra insirendo [...] sendo que o primeiro elemento vai estar na posição [0])</li>
+                </ul>
+                <h3>Selecionando por ID</h3>
+                <ul>
+                    <li><strong>[.getElementByid()]</strong> - (Seleciona elementos atravez do seu id.)</li>
+                </ul>
+                <h3>Selecionando por NAME</h3>
+                <ul>
+                    <li><strong>[.getElementsByName()[...]]</strong> - (Seleciona elementos atravez do seu nome.)</li>
+                </ul>
+                <h3>Selecionando por CLASS</h3>
+                <ul>
+                    <li><strong>[.getElementsByClassName]</strong> - (Seleciona elementos atravez da sua class)</li>
+                </ul>
+                <h3>Selecionando por SELETORES (CSS)</h3>
+                <ul>
+                    <li><strong>[querySelector(ex.: div#id ou div.class)]</strong> - (Faz a seleção atraves de componentes CSS; Funcionalidade nova, pode não funcionar em todos os navegadores)</li>
+                    <li><strong>[querySelectorAll()]</strong> - ()</li>
+                </ul>
+            </section><!--Fim seção DOM-->
             <section>
                 <h2>Dicas e macetes</h2>
 
@@ -170,8 +211,15 @@
             //exercicio 04
             var nome= window.prompt("Digite seu nome: ")
             document.write(`Seu nome ${nome} tem ${nome.length} letras`)
+            
+            //DOM selecionando elementos
+            var h1= window.document.getElementsByTagName('h1')[1]
+            var p1= window.document.getElementsByTagName('p1')[0]
+            window.document.write(window.document.URL);
+            h1.style.color= 'blue';
             */
-            //exercicio 05
+            
+
 
        </script>
        <footer class="rodape">
