@@ -8,17 +8,7 @@
     <link rel="stylesheet" href="cvjavastyle.css">
     <link rel="shortcut icon" href="../HTML+CSS/exercicios HTML/imagens/nerd.ico" type="image/x-icon">
     <style>
-        div#area {
-            background-color: rgb(25, 240, 25);
-            color: white;
-            width: 200px;
-            height: 200px;
-            line-height: 200px;
-            font: normal 20pt;
-            text-align: center;
-
-        }
-
+        
     </style>
 </head>
 <body>
@@ -160,7 +150,6 @@
                     <ul>
                         <li><strong>document.writeln(contente)</strong> - (Este comando escreve uma mensagem no corpo da página e pula para linha de baixo)</li>
                     </ul>
-                    <li></li>
                 </ul>
             </section><!--Fim da seção comandos java-->
             <section>
@@ -201,10 +190,19 @@
                 <p><strong>.exite</strong> - (Comando de saida do terminal)</p>
                 <p><strong>typeof</strong> - (Comando para mostrar qual o tipo de varialvel esta sendo utilizada)</p>                
                 </section><!--Fim da seção dicas e macetes-->
-                <div id="area" onclick="clique">
-                    Interaja
+                <div id="area">
+                    Interaja...
                 </div>
-
+                <section>
+                    <h2>Calculadora - soma</h2>
+                    <input type="number" name="textn1" id="textn1"> + 
+                    <input type="number" name="textn2" id="textn2">
+                    <input type="button" value="Soma" name="Soma" id="soma">
+                    <div id="resul">
+                        Resultado....
+                    </div>
+                </section>
+                
         </main>
         <script>
             /*
@@ -235,14 +233,46 @@
             window.document.write(window.document.URL);
             h1.style.color= 'blue';
             */
-            //Modificando elemento atravez de JS
-            
-            var a = window.document.getElementById('area')
-            function clique() {
 
+
+
+
+
+
+            //Modificando elemento atravez de JS            
+            var a = window.document.getElementById('area')
+            a.addEventListener('click', clique)
+            a.addEventListener('mouseenter', entrar)
+            a.addEventListener('mouseleave', sair)
+         
+            function clique() {
                 a.innerText = 'Foi clicado'
+                a.style.backgroundColor= 'red'
+            }
+            function entrar() {
+                a.innerText = 'Entrou'
+            }
+            function sair() {
+                a.innerText = 'Saiu'
+                a.style.backgroundColor= 'green'
             }
 
+            //desafio 01
+            
+            var resul=window.document.getElementById('resul')
+            var botao=window.document.getElementById('soma')
+
+            botao.addEventListener('click', res)
+
+            function res() {
+            var textn1=window.document.getElementById('textn1')
+            var textn2=window.document.getElementById('textn2')
+            var n1=Number(textn1.value)
+            var n2=Number(textn2.value)
+            var s= n1 + n2
+
+            resul.innerHTML= `O valor da soma entre ${n1} e ${n2} é <strong>${s}</strong>`
+            }
        </script>
        <footer class="rodape">
            <section class="rodape">
