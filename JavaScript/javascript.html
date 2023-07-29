@@ -16,7 +16,7 @@
         <section class="cabecalho">
             <h1 class="cabecalho">Curso de JavaScript</h1>
             <nav>
-                <a href="#">Link</a>
+                <a href="../HTML+CSS/exercicios HTML/hcode/hcodehome.html">HTML</a>
                 <a href="#">Link</a>
             </nav>
         </section>
@@ -24,7 +24,7 @@
         <main>
             <section>
                 <h1>JavaScript language</h1>
-                <p id="p1">Essa linguagem de programação é a mais usada no mundo quando o assunto é desenvolvimento de applicações para Web. É recomendado que todos os codigo JavaScript estejam localizados dentro da tag script e que essa tag esteja no fim do documento antes do fechamento do corpo da página (/body)</p>
+                <p id="p1">Essa linguagem de programação é a mais usada no mundo quando o assunto é desenvolvimento de applicações para Web. É recomendado que todos os codigo JavaScript estejam localizados dentro da tag script e que essa tag esteja no fim do documento antes do fechamento do corpo da página (/body) fadfdafad fdf d afe e</p>
             </section>
             <section>
                 <h2>Variaveis</h2>
@@ -179,6 +179,19 @@
                 </ul>
             </section><!--Fim seção DOM-->
             <section>
+                <h2>Eventos em JavaScript</h2>
+                <p>É possivel configurar a esculta de eventos diretamento dentro do JavaScript, possibilitando a execução de funcions.</p>
+                <ul>
+                    <li><strong>var.addEventListener('event', function)</strong> - (Usando a variavel de ligação com o elemento é possivel adicinar a esculta de qualquer evento dentro desse elemento e então disparar a execução de uma função contendo varios comando.)</li>
+                </ul>
+                
+            </section><!--Fim da seção Eventos-->
+            <section>
+                <h2>Funções em JavaScript</h2>
+                <p>O que são Funções?</p>
+
+            </section>
+            <section>
                 <h2>Dicas e macetes</h2>
 
                 <h3>Operador [+]</h3>
@@ -192,7 +205,7 @@
                 </section><!--Fim da seção dicas e macetes-->
                 <div id="area">
                     Interaja...
-                </div>
+                </div> <!--Fim do exemplo-->
                 <section>
                     <h2>Calculadora - soma</h2>
                     <input type="number" name="textn1" id="textn1"> + 
@@ -202,7 +215,53 @@
                         Resultado....
                     </div>
                 </section>
-                
+                <section>
+                    <h2>Detran multas</h2>
+                    Digite sua velocidade: 
+                    <input type="number" name="velo" id="velo"> Km/h 
+
+                    <input type="button" value="Verificar" onclick="multa()">
+
+                    <div id="multas">
+                        Aguardando resultados...
+                    </div>
+                    <script>
+                        function multa() {
+                        var texvel= window.document.getElementById('velo')
+                        var vel=Number(texvel.value)
+                        var mu=window.document.getElementById('multas')
+
+                        mu.innerHTML = `<p>Sua velocidade é de <strong>${vel}</strong> KM/h</p>`
+                        if (vel>60) {
+                            mu.innerHTML += `<p>Você ultrapassou o limite de velocidade e foi <strong>multado!!!</strong></p>`
+                        }
+                        mu.innerHTML += `Use sempre cinto de seurança`
+                        }
+                    </script>
+                </section><!--Fim do exercicio-->
+                <section>
+                    <h2>Nacionalidade</h2>
+                    Digite seu pais de origen: 
+                    <input type="text" title="Pais" name="pais" id="pais">
+                    <input type="button" value="Descobrir" onclick="nacao()">
+                    <div id="nacional">
+                        Carregando...
+                    </div>
+                    <script>
+                        function nacao() {
+                            var paiz=window.document.getElementById('pais')
+                            var naci=window.document.getElementById('nacional')
+
+                            if (paiz!='Brasil') {
+                                naci.innerHTML= `Seu pais de origem é ${paiz}, portanto você é <strong>estrangeiro!!</strong>`
+                            } 
+                            else {
+                                naci.innerHTML= `Você nasceu no ${paiz} e é <strong>Brasileiro!!</strong>`
+                            }
+                        }
+                    </script>
+
+                </section><!--Fim do exercicio-->
         </main>
         <script>
             /*
@@ -273,6 +332,8 @@
 
             resul.innerHTML= `O valor da soma entre ${n1} e ${n2} é <strong>${s}</strong>`
             }
+            
+            
        </script>
        <footer class="rodape">
            <section class="rodape">
