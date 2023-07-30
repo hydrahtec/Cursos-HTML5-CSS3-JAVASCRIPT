@@ -1,6 +1,14 @@
 <!doctype html><!--Essa tag define que o documento será escrito em HTML 5 /so abre /unica tag que pode vir antes da tag raiz-->
 
-<!---->
+<!--
+    Vs -Code dicas
+    copiar linha: SHIFT + ALT + SETA
+    apagar linha: CONTRL + SHIFT + K
+    mudar linha de posição: ATL + SETA
+    proxima ocorrencia de palavra: CONTRL + D
+    modo zen: CONTROL + K + Z
+
+-->
 
 <html lang="pt-br"> <!--HTML ; tag raiz /abre+fecha /recebe todos os atributos globais /em um atr exclusivo: xmlns que define que esse doc html esta em conformidade com a versão anterior do html /style: block e sem outline -->
 
@@ -956,36 +964,68 @@
             <p></p>
         </section>
         <section id="tag_input"><!--
-            <input type="text" name="nome" placeholder="Digite seu nome...">
-            <input type="text" name="cpf" pattern="([0-9]{2}[\.]?[0-9]{3}[\.]?[0-9]{3}[\/]?[0-9]{4}[-]?[0-9]{2})|([0-9]{3}[\.]?[0-9]{3}[\.]?[0-9]{3}[-]?[0-9]{2})">
-            <input type="checkbox">
-            <input type="checkbox" checked>
-            <input type="color" name="cor">
-            <input type="color" name="cor" value="#FF0000">
-            <input type="date">
-            <input type="datetime-local">
-            <input type="email" required>
-            <input type="file">
-            <input type="file" multiple accept="image/*">
-            <input type="hidden">
             <input type="image" src="images/logo.png" width="50" height="50">
-            <input type="month">
-            <input type="number" step=".5">
-            <input type="password">
-            <input type="radio" name="genero" checked> Feminino
-            <input type="radio" name="genero"> Masculino
-            <input type="range" min="0" max="100" value="30">
-            <input type="reset">
-            <input type="search">
-            <input type="submit">
-            <input type="tel">
-            <input type="time">
-            <input type="url">
             <input type="url" value="https://www.hcode.com.br" readonly>
-            <input type="week">
         -->
             <h2>Tag 'input'</h2>
-            <p></p>
+            <p>Tag usada para definir um campo de entrada. <br> Um campo de entrada serve para o usuario inserir dados ou interragir com a pagina. <br>A tag pode variar de várias maneiras dependendo do atributo type. <br> Aceita todos os atributos globais e possui muitos atributos adicionais:</p>
+            <h3>Atributos da tag input</h3>
+            <ul>
+                <li type="circle"><strong>accept</strong> - (Define o tipo de arquivo aceito para ser selecionado - se aplica apenas quando o atributo 'type' tem o valor 'file' - extensão ou tipo de arquivo)</li>
+                <li type="circle"><strong>alt</strong> - (Define um texto alterntivo - usado apenas quando o atributo 'type' tem o valor 'img' - texto.)</li>
+                <li type="circle"><strong>autocomplete</strong> - (Define se o campo pode ter habilitado o auto completar do navegador - espera-se 'on' ou 'off'.)</li>
+                <li type="circle"><strong>autofocus</strong> - (Define o foco neste campo quando a página é carregada - 'autofocus')</li>
+                <li type="circle"><strong>checked</strong> - (Define se o campo esta marcado/selecionado. - Se aplica apenas quando o atributo type tem o valor 'checkbox' ou 'radio' - checked)</li>
+                <li type="circle"><strong>dirname</strong> - (Define o nome do campo que será enviado informando a direção do texto escrito - NomeDoInput.dir)</li>
+                <li type="circle"><strong>disable</strong> - (Define o campo como desabilitado - disable.)</li>
+                <li type="circle"><strong>form</strong> - (Define qual o formulário que este campo pertence - ID do formulário.)</li>
+                <li type="circle"><strong>formaction</strong> - (Define qual a URL de envio desse campo. Se aplica apenas qunado o atributo 'type' tem o valor 'submit' ou 'image'. - URL)</li>
+                <li type="circle"><strong>formenctype</strong> - (Define o enctype do formulário ao enviar este campo. Se aplica apenas qunado o atributo 'type' tem o valor 'submit' ou 'image' - application/x-www-form-urllencoded, multipart/form-data, text/plain.)</li>
+                <li type="circle"><strong>formmethod</strong> - (Define qual será o metodo do formulário ao clicar neste botão. Se aplica apenas quando o atributo 'type' tem o valor 'submit' ou 'image' - get, post)</li>
+                <li type="circle"><strong>formnovalidate</strong> - (Desativa a validação do formulário ao clocar nesse botão.)</li>
+                <li type="circle"><strong>formtarget</strong> - (Define qual será o target do formulário ao clicar nesse botão. apenas quando for 'submit' ou 'image' - _blanck, _self, _parent, _top, nome do frame.)</li>
+                <li type="circle"><strong>height</strong> - (Define a altura do campo. apenas quando for 'image' - numero.)</li>
+                <li type="circle"><strong>list</strong> - (Define qual tag 'datalist' esta vinculada com este campo. Nós podemos faver nosso proprio autocompletar criando uma lista especifica e vinculando ela dentro do input. - ID do datalist)</li>
+                <li type="circle"><strong>max</strong> - (Define um valor maximo - numero ou data)</li>
+                <li type="circle"><strong>maxlength</strong> - (Define um comprimento maxiomo de caracteres - numero)</li>
+                <li type="circle"><strong>min</strong> - (Define um valor minimo - numero ou data)</li>
+                <li type="circle"><strong>multiple</strong> - (Define se o usuario pode entrar com mais de um valor neste campo. Apenas quando for 'file' - multiple)</li>
+                <li type="circle"><strong>name</strong> - (Define o nome do campo - texto)</li>
+                <li type="circle"><strong>pattern</strong> - (Define uma expressão regular para validação do campo - expressão regular.)</li>
+                <li type="circle"><strong>placeholder</strong> - (Define um texto de dica que descreve o valor esperado - texto)</li>
+                <li type="circle"><strong>readonly</strong> - (Defineo campo como somente leitura)</li>
+                <li type="circle"><strong>required</strong> - (Define o campo como obrigatótio para o envio do formulário.)</li>
+                <li type="circle"><strong>size</strong> - (Define a largura em caracteres do campo. - numero)</li>
+                <li type="circle"><strong>src</strong> - (Define a fonte do arquivo. apenas quando for image - URL)</li>
+                <li type="circle"><strong>step</strong> - (Define o intervalo de numero permitidos. apenas qunado for number. - numero)</li>
+                <li type="circle"><strong>type</strong> - (Define o tipo do campo. <strong>button, checkbox, color, data, datetime-local, password, radio, range, reset, number, email, file, hidden, image, month, search, tel, text, time, url e week</strong> )</li>
+                <li type="circle"><strong>value</strong> - (Define o valor inicial do campo)</li>
+                <li type="circle"><strong>width</strong> - (Define a largura do campo. apenas quando for image. - numero)</li>
+            </ul>
+            <h3>Tipos de input</h3>
+            <ul>
+                <li type="squere">type: <strong>text</strong> - ( <input type="text" placeholder="Digine um nome" value="joão"> )</li>
+                <li type="square">type: <strong>checkbox</strong> - ( <input type="checkbox" name="option" checked value="1" placeholder="box"> + <input type="checkbox" name="option" checked value="2" placeholder="box"> )</li>
+                <li type="square">type: <strong>radio</strong> - ( <input type="radio" name="gender" value="M" placeholder="M"> ou <input type="radio" name="gender" value="F" placeholder="F"> )</li>
+                <li type="square">type: <strong>color</strong> - ( <input type="color" value="#fff" placeholder="Escolha uma cor"> )</li>
+                <li type="square">type: <strong>date</strong> - ( <input type="date" placeholder="data" > )</li>
+                <li type="square">type: <strong>datetime-local</strong> - ( <input type="datetime-local" placeholder="hora"> )</li>
+                <li type="square">type: <strong>email</strong> - ( <input type="email" placeholder="email" > )</li>
+                <li type="square">type: <strong>submit</strong> - ( <input type="submit" name="enviar" placeholder="enviar" value="ok"> )</li>
+                <li type="square">type: <strong>file</strong> - ( <input type="file" name="arquivos" placeholder="arquivos" accept="image/png" multiple> )</li>
+                <li type="square">type: <strong>hidden</strong> - ( <input type="hidden" name="id" value="999"> )</li>
+                <li type="square">type: <strong>month</strong> - ( <input type="month" name="mes" placeholder="selecione um mes"> )</li>
+                <li type="square">type: <strong>number</strong> - ( <input type="number" name="numero" placeholder="Digite um numero" step=".5"> )</li>
+                <li type="square">type: <strong>password</strong> - ( <input type="password" name="senha" placeholder="Digite a senha"> )</li>
+                <li type="square">type: <strong>reset</strong> - ( <input type="reset" value="Limpar" placeholder="limpar"> )</li>
+                <li type="square">type: <strong>button</strong> - ( <input type="button" value="Salvar" placeholder="salvar"> )</li>
+                <li type="square">type: <strong>search</strong> - ( <input type="search" name="busca" placeholder="busca"> )</li>
+                <li type="square">type: <strong>tel</strong> - ( <input type="tel" name="numero tel" placeholder="Digite seu telefone"> )</li>
+                <li type="square">type: <strong>time</strong> - ( <input type="time" name="horas" placeholder="Escolha o horario"> )</li>
+                <li type="square">type: <strong>URL</strong> - ( <input type="url" name="site" placeholder="Digite a URL"> )</li>
+                <li type="square">type: <strong>week</strong> - ( <input type="week" name="semana" placeholder="Escolha a semana"> )</li>
+                <li type="square">type: <strong>renge</strong> - ( <input type="range" name="volume" placeholder="volume" min="0" max="100" value="50"> )</li>
+            </ul>
         </section>
         <section id="tag_dd"><!---->
             <h2>Tag 'dd'</h2>
