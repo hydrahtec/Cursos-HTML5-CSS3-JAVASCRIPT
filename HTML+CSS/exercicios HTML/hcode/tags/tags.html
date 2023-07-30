@@ -589,40 +589,25 @@
             <h2>Tag 'caption'</h2>
             <p></p>
         </section>
-        <section id="tag_header"><!--
-            <header>
-                <img src="images/logo.png" alt="Logo">
-            </header>
-
-            <article>
-
-                <header>
-                    <h1>Title</h1>
-                    <h2>Subtitle</h2>
-                </header>
-
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur unde culpa ratione esse fugiat eligendi sint mollitia, ipsam aspernatur error nesciunt magni vitae accusamus aliquid qui eius reiciendis eum laborum.</p>
-
-            </article>
-        -->
+        <section id="tag_header"><!---->
             <h2>Tag 'header'</h2>
-            <p></p>
+            <p>É usada para definir o cabeçalho da página. Tambem pode definir um cabeçalho relativo ao seu contexto. Normalmente esta tag possui tags de titulo e pode ser colocado um logotipo, icon ou autoria.</p>
         </section>
         <section id="tag_main"><!---->
             <h2>Tag 'main'</h2>
-            <p></p>
+            <p>Define o conteudo principal do documento. Não deve haver nenhum conteudo repetido na tag main e ela so deve ser usada uma vez na pagina.</p>
         </section>
         <section id="tag_footer"><!---->
             <h2>Tag 'footer'</h2>
-            <p></p>
+            <p>É usada para definir o rodape da página. Pode ser usada mais de uma vez dependedo do texto. essa tag contém informação sobre direitos autorais, autorias, contato, mapa do site, link para o topo, links para outras páginas.</p>
         </section>
         <section id="tag_article"><!---->
             <h2>Tag 'article'</h2>
-            <p></p>
+            <p>É usada para defininr como artigo o conteúdo da página. normalmente usado em fóruns, blogs e noticias. Importante para separar semanticamente o conteudo.</p>
         </section>
         <section id="tag_section"><!---->
             <h2>Tag 'section'</h2>
-            <p></p>
+            <p>É usada para definir uma seção do documento.</p>
         </section>
         <section id="tag_aside"><!---->
             <h2>Tag 'aside'</h2>
@@ -636,7 +621,7 @@
             </nav>
         -->
             <h2>Tag 'nav'</h2>
-            <p></p>
+            <p>Define um conjunto de links de navegação. Ela pode se repetir dependendo do contexto.</p>
         </section>
         <section id="tag_address"><!--
             <address>
@@ -651,28 +636,24 @@
             <h2>Tag 'addrres'</h2>
             <p></p>
         </section>
-        <section id="tag_datails"><!--
-            <input list="linguagens">
-
-            <datalist id="linguagens">
-                <option value="PHP">
-                <option value="JavaScript">
-                <option value="SQL">
-                <option value="Java">
-            </datalist>
-        -->
+        <section id="tag_datails"><!---->
             <h2>Tag 'details'</h2>
-            <p></p>
-        </section>
-        <section id="tag_summary"><!--
+            <p>É usada para definir detalhes adicionais que o usuário pode exibir ou ocultar. Qualquer tipo de conteudo pode ser colocado dentro desta tag. Por padrão o conteudo dos detalhes não é exibido para o usuário. Essa tag deve conter um summary dentro dela. Para configurar como abero basta colocar o atributo 'open'.</p>
             <details>
                 <summary>Hcode</summary>
-                <p>Hcode Treinamentos, acesso o nosso site: https://www.hcode.com.br</p>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime ex consequatur eveniet ipsam, doloribus deserunt molestiae numquam aut. Enim sapiente odit tempora quo dolorum harum amet dolore! Dolorum, laborum corrupti.
+                </p>
             </details>
-        -->
-            <h2>Tag 'summary'</h2>
-            <p></p>
         </section>
+        <section id="tag_summary"><!--
+        -->
+        <h2>Tag 'summary'</h2>
+        <p>É usada para definir o cabeçalho visivel dentro da tag 'details'</p>
+        <details>
+            <summary>Hcode</summary>
+            <p>Hcode Treinamentos, acesso o nosso site: https://www.hcode.com.br</p>
+        </details>
+    </section>
         <section id="tag_ul"><!---->
             <h2>Tag 'ul'</h2>
             <p></p>
@@ -903,18 +884,18 @@
             <h2>Tag 'u'</h2>
             <p></p>
         </section>
-        <section id="tag_pre"><!--
+        <section id="tag_pre"><!---->
+            <h2>Tag 'pre'</h2>
+            <p>É usada para definir um texto pré-formatado. Ela preserva os espaços e quebras de linha.</p>
+
             <p>
-                Hcode
-                Treinamentos
+                hcode 
+                treinamento 
             </p>
             <pre>
-                Hcode
-                Treinamentos
+                hcode
+                treinamentos
             </pre>
-        -->
-            <h2>Tag 'pre'</h2>
-            <p></p>
         </section>
         <section id="tag_samp"><!--
             <p>Estou tentando ligar meu computador, mas está aprarecendo a mensagem:</p>
@@ -930,11 +911,10 @@
             <h2>Tag 'var'</h2>
             <p></p>
         </section>
-        <section id="tag_code"><!--
-            <code>$names = ['João', 'Glaucio', 'Djalma'];</code>
-        -->
+        <section id="tag_code"><!---->
             <h2>Tag 'code'</h2>
-            <p></p>
+            <p>É usada para definir parte um texto como parte de um código de computador</p>
+            <code>$names = ['joão', 'Glaucio', Djalma];</code>
         </section>
         <section id="tag_dl"><!--
             <dl>
@@ -953,15 +933,25 @@
             <h2>Tag 'dt'</h2>
             <p></p>
         </section>
-        <section id="tag_form"><!--
-            <form action="/send" method="post">
-        
-                <input type="text" name="campo">
-                <input type="submit" value="Enviar">
-            </form>
-        -->
-            <h2>Tag 'form'</h2>
-            <p></p>
+        <section id="tag_form"><!---->
+        <h2>Tag 'form'</h2>
+        <p>É usada para definir um formulário. Eles agrupam campos de entrada de dados dos usuários.</p>
+        <ul>
+            <li type="square"><strong>accept-charset</strong> - (Define o encode usado para enviar o formulário- charset)</li>
+            <li type="square"><strong>action</strong> - (Define para qual URl o formulário será enviado - URl)</li>
+            <li type="square"><strong>autocomplete</strong> - (Define se os campos terão a função autocompletar habilitado - on, off.)</li>
+            <li type="square"><strong>enctype</strong> - (Define qual codificação de formulário será usada - application/x-www-form-urllencoded, multipart/form-data, text/plain)</li>
+            <li type="square"><strong>method</strong> - (Define qual será o metodo de envio do formulário - get, post)</li>
+            <li type="square"><strong>name</strong> - (Define qual o nome do formulário)</li>
+            <li type="square"><strong>novalidate</strong> - (Define se deve ser validado ao enviar)</li>
+            <li type="square"><strong>target</strong> - (Define qual o alvo ao enviar o formulário)</li>
+        </ul>
+        <form action="/send" method="post">
+    
+            <input type="text" name="campo" placeholder="campo">
+            <input type="submit" value="Enviar">
+        </form>
+
         </section>
         <section id="tag_input"><!--
             <input type="image" src="images/logo.png" width="50" height="50">
@@ -1031,18 +1021,15 @@
             <h2>Tag 'dd'</h2>
             <p></p>
         </section>
-        <section id="tag_button"><!--
-            <form>
-                <input type="text">
-
-                <button type="button">Botão</button>
-                <button type="reset">Limpar</button>
-                <button type="submit">Enviar</button>
-
-            </form>
-        -->
+        <section id="tag_button"><!---->
             <h2>Tag 'button'</h2>
-            <p></p>
+            <p>É usada para definir um botão clicavel. Dentro dela pode ser colocado conteúdo como texto ou imagem. è necessario sempre especificar o atributo 'type'. Cada navegador pode usar um padrão especifico para o atributo 'type'. <br> Possui os atributos: <strong>autofocus, disable, form, formaction, formenctype, formmethod, formnovalidate, formtarget, name, type(buttom, reset, submit), value.</strong></p>
+            <form id="hcode">
+                <input type="text" name="name" id="hcode" placeholder="nome hcode">
+            </form>
+            <button type="button" form="hcode">Botão</button>
+            <button type="reset" form="hcode">Limpar</button>
+            <button type="submit" form="hcode">Enviar</button>
         </section>
         <section id="tag_fieldset"><!--
             <fieldset>
@@ -1115,7 +1102,14 @@
         </section>
         <section id="tag_datalist"><!---->
             <h2>Tag 'datalist'</h2>
-            <p></p>
+            <p>É usada para definir uma lista de opções para um input. O 'ID' desta tag é usado no atributo 'list' da tag 'input' para validação. Muito parecido com um autocompletar.</p>
+            <input type="text" name="lista" placeholder="Escolha uma opção" list="listaop">
+
+            <datalist id="listaop">
+                <option>opção 01</option>
+                <option>opção 02</option>
+                <option>opção 03</option>
+            </datalist>
         </section>
         <section id="tag_textarea"><!--
             <textarea name="mensagem" cols="30" rows="10"></textarea>
@@ -1127,15 +1121,15 @@
             <h2>Tag 'dialog'</h2>
             <p></p>
         </section>
-        <section id="tag_output"><!--
-            <form oninput="c.value=parseInt(a.value) + parseInt(b.value)">0
-                <input type="range" id="a" value="0" min="0" max="10">10
-                +<input type="number" id="b" value="0">
-                =<output name="c" for="a b">0</output>
-            </form>
-        -->
+        <section id="tag_output"><!---->
             <h2>Tag 'output'</h2>
-            <p></p>
+            <p>É usada para mostrar o resultado de um calculo. Possui os atributos: <strong>For( relação entre o resultado e os elemtno usados para o calculo), form (qual formulário que essa campo pertence) e name (define um nome para o elemento)</strong></p>
+
+            <form oninput="c.value= Number(a.value) + Number(b.value)">
+                <input type="range" id="a" placeholder="numero 01" value="0">+
+                <input type="number" id="b" placeholder="numeor 02" min="0" max="100" value="0">=
+                <output name="c" for="a b">0</output>
+            </form>
         </section>
         <section id="tag_meter"><!--
             <meter value="2" min="0" max="10">2 out of 10</meter><br>
