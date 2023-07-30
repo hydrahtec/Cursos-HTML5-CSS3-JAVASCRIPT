@@ -184,13 +184,23 @@
                 <ul>
                     <li><strong>var.addEventListener('event', function)</strong> - (Usando a variavel de ligação com o elemento é possivel adicinar a esculta de qualquer evento dentro desse elemento e então disparar a execução de uma função contendo varios comando.)</li>
                 </ul>
-                
             </section><!--Fim da seção Eventos-->
             <section>
                 <h2>Funções em JavaScript</h2>
                 <p>O que são Funções?</p>
-
-            </section>
+            </section><!--Fim da seção funções-->
+            <section>
+                <h2>Condições em JavaScript</h2>
+                <p>Condições são essenciais no desenvolvimento de codigo pois nos permitem definir uma ou mais dereições a serem tomadas com base no resultado delas.</p>
+                <h3>Condição simples</h3>
+                <p><pre><code>if (teste) {...}</code></pre></p>
+                <h3>Condição composta</h3>
+                <p><pre><code>if (teste) {...} else {...}</code></pre></p>
+                <h3>Condição aninhada</h3>
+                <p><pre><code>if (teste) {...} else { if (teste) {...} else {...}}</code></pre></p>
+                <h3>Condicionla 'switch'</h3>
+                <p><code>switch (expressão) {case 0: ... break case 1: ... break case 2: ... break default: ... break}</code> - (É  possivel inserir quantos casos forem necessarios. é obrigatório o uso do break no fim de cada case. ao final das cases colocar default - será usado qunaod todos os casos acima não se aplicarem.)</p>
+            </section><!--Fim da seção condições-->
             <section>
                 <h2>Dicas e macetes</h2>
 
@@ -202,66 +212,69 @@
                 <h3><strong>Comandos terminal node js</strong></h3>
                 <p><strong>.exite</strong> - (Comando de saida do terminal)</p>
                 <p><strong>typeof</strong> - (Comando para mostrar qual o tipo de varialvel esta sendo utilizada)</p>                
-                </section><!--Fim da seção dicas e macetes-->
+            </section><!--Fim da seção dicas e macetes-->
                 <div id="area">
                     Interaja...
                 </div> <!--Fim do exemplo-->
-                <section>
-                    <h2>Calculadora - soma</h2>
-                    <input type="number" name="textn1" id="textn1"> + 
-                    <input type="number" name="textn2" id="textn2">
-                    <input type="button" value="Soma" name="Soma" id="soma">
-                    <div id="resul">
-                        Resultado....
-                    </div>
-                </section>
-                <section>
-                    <h2>Detran multas</h2>
-                    Digite sua velocidade: 
-                    <input type="number" name="velo" id="velo"> Km/h 
+            <section>
+                <h2>Calculadora - soma</h2>
+                <input type="number" name="textn1" id="textn1" placeholder="digite um numero"> + 
+                <input type="number" name="textn2" id="textn2" placeholder="numero">
+                <input type="button" value="Soma" name="Soma" id="soma">
+                <div id="resul">
+                    Resultado....
+                </div>
+            </section>
+            <section>
+                <h2>Detran multas</h2>
+                Digite sua velocidade: 
+                <input type="number" name="velo" id="velo" placeholder="velocidade"> Km/h 
 
-                    <input type="button" value="Verificar" onclick="multa()">
+                <input type="button" value="Verificar" onclick="multa()">
 
-                    <div id="multas">
-                        Aguardando resultados...
-                    </div>
-                    <script>
-                        function multa() {
-                        var texvel= window.document.getElementById('velo')
-                        var vel=Number(texvel.value)
-                        var mu=window.document.getElementById('multas')
+                <div id="multas">
+                    Aguardando resultados...
+                </div>
+                <script>
+                    function multa() {
+                    var texvel= window.document.getElementById('velo')
+                    var vel=Number(texvel.value)
+                    var mu=window.document.getElementById('multas')
 
-                        mu.innerHTML = `<p>Sua velocidade é de <strong>${vel}</strong> KM/h</p>`
-                        if (vel>60) {
-                            mu.innerHTML += `<p>Você ultrapassou o limite de velocidade e foi <strong>multado!!!</strong></p>`
+                    mu.innerHTML = `<p>Sua velocidade é de <strong>${vel}</strong> KM/h</p>`
+                    if (vel>60) {
+                        mu.innerHTML += `<p>Você ultrapassou o limite de velocidade e foi <strong>multado!!!</strong></p>`
+                    }
+                    mu.innerHTML += `Use sempre cinto de seurança`
+                    }
+                </script>
+            </section><!--Fim do exercicio-->
+            <section>
+                <h2>Nacionalidade</h2>
+                Digite seu pais de origen: 
+                <input type="text" placeholder="Pais" id="pais" name="pais">
+                <input type="button" value="Descobrir" onclick="nacao()" placeholder="decobrir">
+                <div id="nacional">
+                    Carregando...
+                </div>
+                <script>
+                    function nacao() {
+
+                        var pa=window.document.querySelector('#pais')
+                        var patext=String(pa.value)
+                        var naci=window.document.getElementById('nacional')
+
+                        if (patext=='brasil') {
+                            naci.innerHTML= `Você nasceu no ${patext} e é <strong>Brasileiro!!</strong>`
+                        } else {
+                            naci.innerHTML= `Seu pais de origem é ${patext}, portanto você é <strong>estrangeiro!!</strong>`
                         }
-                        mu.innerHTML += `Use sempre cinto de seurança`
-                        }
-                    </script>
-                </section><!--Fim do exercicio-->
-                <section>
-                    <h2>Nacionalidade</h2>
-                    Digite seu pais de origen: 
-                    <input type="text" title="Pais" name="pais" id="pais">
-                    <input type="button" value="Descobrir" onclick="nacao()">
-                    <div id="nacional">
-                        Carregando...
-                    </div>
-                    <script>
-                        function nacao() {
-                            var paiz=window.document.getElementById('pais')
-                            var naci=window.document.getElementById('nacional')
+                    }
+                </script>
+            </section><!--Fim do exercicio-->
+            <section>
 
-                            if (paiz!='Brasil') {
-                                naci.innerHTML= `Seu pais de origem é ${paiz}, portanto você é <strong>estrangeiro!!</strong>`
-                            } 
-                            else {
-                                naci.innerHTML= `Você nasceu no ${paiz} e é <strong>Brasileiro!!</strong>`
-                            }
-                        }
-                    </script>
-
-                </section><!--Fim do exercicio-->
+            </section><!--Fim do exercicio-->
         </main>
         <script>
             /*
