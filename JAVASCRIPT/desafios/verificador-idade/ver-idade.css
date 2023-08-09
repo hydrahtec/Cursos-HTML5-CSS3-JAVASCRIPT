@@ -1,17 +1,22 @@
 @charset "UTF-8";
 
 body {
-
+    background-color: rgb(255, 255, 255);
 }
 header {
-
+    color: rgb(0, 0, 0);
+    text-align: center;
 }
 section {
-
-}
+    width: 500px;
+    background-color: rgb(218, 218, 218);
+    border-radius: 15px;
+    box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.404);
+margin: auto;}
 footer {
-
+    color: rgb(0, 0, 0);
+    text-align: center;
 }
 div {
-    
+    text-align: center;
 }
