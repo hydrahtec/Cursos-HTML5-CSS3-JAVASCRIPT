@@ -15,19 +15,20 @@
     <section>
         <div>
             <P>Insira seu ano de nascimento:
-                <input type="number" name="idade" id="nasc" min="0">
+                <input type="number" name="txtano" id="txtano" min="1">
             </P>
             <p>Indique seu sexo: 
-                <input type="radio" name="radsex" id="masc">
+                <input type="radio" name="radsex" id="masc" checked>
                 <label for="masc">Masculino</label>
                 <input type="radio" name="radsex" id="femi">
                 <label for="femi">Feminino</label>
+            </p>
+            <p>
                 <input type="button" value="Verificar" onclick="idade()">
             </p>
-
         </div>
         <div id="res">
-            aguardando
+            Preencha os dados acima para ver o resultado
         </div>
     </section>
     <footer>
