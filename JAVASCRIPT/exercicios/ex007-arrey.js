@@ -1,3 +1,12 @@
+let inicio = 1 
+let fim = 10
+let passo = 2
+
+for (let cont=inicio;cont<=fim;cont=cont + passo) {
+    console.log(cont)
+}
+
+
 let num = [5,8,2,9,3]
 
 num.sort()
