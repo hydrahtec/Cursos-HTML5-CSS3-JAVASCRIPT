@@ -22,7 +22,7 @@ let valores= []
         }
     }
 
-    if (isnumero(num.value) && ! inlista(num.value,valores)) {
+    if (isnumero(num.value) && !inlista(num.value,valores)) {
         window.alert('Tudo Ok!!')
     } else {
         window.alert('Erro, o numero que você escolheu não pode ser aceito ou já esta na lista!, verifique e tente novamente.')
