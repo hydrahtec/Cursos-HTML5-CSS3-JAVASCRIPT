@@ -935,22 +935,41 @@
         </section>
         <section id="tag_form"><!---->
         <h2>Tag 'form'</h2>
-        <p>É usada para definir um formulário. Eles agrupam campos de entrada de dados dos usuários.</p>
+        <p>É usada para definir um formulário. Eles agrupam campos de entrada de dados dos usuários. Eles permitem que o usuario informem dados em uma página. Formulários podem ser usados em uma variedade de contextos. Páginas de contato, login e cadastro, são alguns exemplos de uso de formulário.</p>
+        <p>Para que a tag form funcione, é necessario ter pelomenos um campo de texto e um botão. Essa tag abre e fecha, portanto possui cnoteudo dentro dela. Ela possui um atributo importante chamado "action" esse atributo defina para qual URL os dados serão enviados. </p>
         <ul>
             <li type="square"><strong>accept-charset</strong> - (Define o encode usado para enviar o formulário- charset)</li>
-            <li type="square"><strong>action</strong> - (Define para qual URl o formulário será enviado - URl)</li>
+            <li type="square"><strong>action</strong> - (Define para qual URl o formulário será enviado - URl * Quando não informamos o atributo action na tag form o formulário não é enviado para o back-end, mas sim para a própria página em que se encontra.)</li>
             <li type="square"><strong>autocomplete</strong> - (Define se os campos terão a função autocompletar habilitado - on, off.)</li>
             <li type="square"><strong>enctype</strong> - (Define qual codificação de formulário será usada - application/x-www-form-urllencoded, multipart/form-data, text/plain)</li>
             <li type="square"><strong>method</strong> - (Define qual será o metodo de envio do formulário - get, post)</li>
+                <ul>
+                    <li><strong>"get"</strong>Nesse metodo os dados que forem enviados vão aparecer na barra de endereços. não é um metodo seguro portanto só é indicado utilizar quando estiver trabalhando com dados não sensiveis</li>
+                    <li><strong>"post"</strong> Nesse metodo os dados não aparecem na URL, é suguro e indicado para dados sensiveis como senhas  dados de usuario.</li>
+                </ul>
             <li type="square"><strong>name</strong> - (Define qual o nome do formulário)</li>
             <li type="square"><strong>novalidate</strong> - (Define se deve ser validado ao enviar)</li>
             <li type="square"><strong>target</strong> - (Define qual o alvo ao enviar o formulário)</li>
+            <li type="square"><strong>cols</strong> - ()</li>
+            <li type="square"><strong>rows</strong> - ()</li>
+
         </ul>
-        <form action="/send" method="post">
-    
-            <input type="text" name="campo" placeholder="campo">
-            <input type="submit" value="Enviar">
-        </form>
+        <h3>Tag 'textarea'</h3>
+        <p>Trata-se de um cmapo usado para textos grandes como comentarios, mensagens ou sugestões. Atraves do atributo 'name' o back-end tem acesso a esse campo e seus dados</p>
+        <div>
+            <form action="/send" method="post">
+                <input type="text" name="campo" placeholder="campo">
+                <input type="submit" value="Enviar">
+            </form>
+        </div>
+        <div class="sugestao">
+            <h3>Caixa de sugestão</h3>
+
+            <form action="https://www.meucodigo.com.br/sugestao.php">
+                <textarea name="sugestao" id="sugestao" cols="30" rows="10"></textarea>
+                <button type="submit">Enviar sugestão</button>
+            </form>
+        </div>
 
         </section>
         <section id="tag_input"><!--
