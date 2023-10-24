@@ -1,0 +1,169 @@
+@charset "UTF-8";
+
+* {
+    margin: 0; 
+    padding: 0;
+}
+/*=========================================*/
+/*Cascading style sheets*/
+
+.seletoes {
+    /*(.) para seletores de classe*/
+    /*(#) para seletores de ID*/
+    /*(tag) para seletores de <TAG>*/
+
+};
+.margem {
+    /*Adiciona espaço na parte externa da caixa*/
+    margin: 0px;
+    margin-top: 0px; /*cima*/
+    margin-right: 0px; /*direita*/
+    margin-bottom: 0px; /*baixo*/
+    margin-left: 0px; /*esquerda*/
+};
+
+.tamanho {
+    width: 100px, auto, max-content;
+    max-width: 0px;
+    min-width: none;
+    height: 100px;
+    max-height: 0px;
+    min-height: auto;
+
+    box-sizing: border-box
+
+};
+.pading {
+    /*Adiciona espaço na parte interna da caixa*/
+    padding: 0px;
+    padding-top: 0px; /*cima*/
+    padding-right: 0px; /*direita*/
+    padding-bottom: 0px; /*baixo*/
+    padding-left: 0px; /*esquerda*/
+};
+.borda {
+   border: 0px
+};
+.shadow {
+    
+};
+.tipo_texto {
+   text-align: center;
+   text-decoration: dashed;
+   text-transform: capitalize;
+   text-shadow: 0px;
+   text-overflow: clip;
+   text-indent: 0%;
+};
+
+.fontes {
+font: 100, 900, bold, caption, italic, large, normal, oblique, small, calc(), ;
+font-size: large, medium, small;
+font-family: Arial, Helvetica, sans-serif;
+font-weight: 400px;
+font-style:  italic, normal, oblique;
+font-display:  inherit, initial, unset;
+font-variant:  normal, small-caps;
+font-stretch: condensed, expanded;
+font-feature-settings: "aalt";
+font-kerning: auto ;
+};
+
+.cor {
+ color: aqua;
+ /*
+ tipos de cor:
+ rgb: RGB(0,0,0) 
+ hexadecimal: #ffffff
+ nominal: blue
+ */
+};
+
+.back-ground {
+    /*
+    efeito paralax: 
+    */
+    background: 0;
+    background-color: darkturquoise;
+    background-image: url(src);
+    background-position: top;
+    background-repeat: repeat;
+    background-size: contain;
+    background-attachment: fixed;
+};
+
+.displai {
+    display: block; /*dispoe as caixas do elementos em */
+    display: inline; /*dispoe as caixas do elementos em */
+    display: flex; /*dispoe as caixas do elementos em */
+    display: none; /*dispoe as caixas do elementos em */
+};
+
+.posição {
+    position: absolute;
+    position: fixed;
+    position: relative;
+    position: static;
+    position: sticky;
+};
+.box-model {
+    /*direção do flexbox*/
+    flex-direction: column;
+    flex-direction: column-reverse;
+    flex-direction: row;
+    flex-direction: row-reverse;
+    
+    /*quebra de linha*/
+    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    flex-wrap: wrap-reverse;
+    
+    /**/
+
+};
+
+.alinhamento {
+    /*box vertical*/
+    align-items: start;
+    align-items: end;
+    align-items: center;
+    align-items: flex-end;
+    
+    /*box horizontal*/
+    justify-content: center;
+    justify-content: end;
+    justify-content: start;
+    justify-content: stretch;
+    justify-content: space-around;
+    justify-content: space-evenly;
+    justify-content: space-between;
+
+    /*conteudo*/
+    text-align: center;
+    text-align: justify;
+    text-align: right;
+    text-align: left;
+    text-align: start;
+
+};
+.pseudo_clases {
+    
+};
+
+.pseudo_elementos {
+
+};
+.media_queries {
+    
+};
+.unidades_medidas {
+    /*
+    px - ( )
+    % - ( )
+    pt - ( )
+    vw - ( )
+    vh - ( )
+    em - ( )
+    rem - ( )
+    */
+};
