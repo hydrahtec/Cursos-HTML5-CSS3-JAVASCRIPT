@@ -7,7 +7,18 @@
 /*=========================================*/
 /*Cascading style sheets
 recomenda-se usar os estilos css em arquivos separados.
-geralmente cria-se um arquivo css principal com nome main.css ou index.css
+geralmente cria-se um arquivo css principal com nome style.css ou main.css, para abrager os estilos mais gerais de fonte, titulos, layaut..., e outros arquivos css com nomes diferentes criados para estilizar coisas especificas.
+
+==> elemtentos com display inline não aceitam propriedades do tipo margin, heigth... os boxes ocuoam somente o tamanho do conteudo. para contornar isso é preciso mudar o dispalay pra inline-block.
+
+==> https://picsum.photos/200
+
+site de imagem gratis aleartorias para testes nos projetos
+
+==> !important burla a ordem de prioridade do css
+
+==> atentar para os niveis de especivicidade dos seletores.
+quanto mais seletores usar para selecionar um elemento mais dificil será para atribuir novos valores durante o decorrer do codigo. mantenha o mesmo nivel de seleção
 */
 
 .seletoes {
@@ -112,15 +123,22 @@ geralmente cria-se um arquivo css principal com nome main.css ou index.css
    line-through: riscando o texto
    none: nenhum
    */
-   text-transform: capitalize;
+   text-transform: capitalize; 
+   /*
+   pode transformar o texto por exemplo para maiscula, minuscula ou a primeira letra maiuscula.
+   */
    text-shadow: 0px;
    text-overflow: clip;
-   text-indent: 0%;
-
+   text-indent: 0%; /*recua a primeira linha do texto*/
    list-style: none;
-   line-height: 20px; /*altura da linha*/
+   line-height: 1.5px; /*altura da linha*/
    line-break: auto;
 
+   letter-spacing: -5px; /*estabelece um espaçamento entre as letras.*/
+
+   word-spacing: 15px; /*espaço entre as palavras*/
+
+   list-style-type: none; /*returia os desenhos das lista desordenadas*/
 };
 
 .fontes {
@@ -230,6 +248,9 @@ Arial, Verdana, Helvetica, Trebuchet MS, Georgia, Courier New, Comic Sans MS, Br
 .posicionamento {
     position: absolute;
     position: fixed;
+    /*
+    mantem um elemento fixo na tela independente do fluxo normal do codigo.
+    */
     position: relative;
     position: static;
     position: sticky;
@@ -239,8 +260,20 @@ Arial, Verdana, Helvetica, Trebuchet MS, Georgia, Courier New, Comic Sans MS, Br
     left / rigth: npx;
     */
     /*
-    entender melhor a relação entre os contents relative e absolute;
+   o absoluto faz referencia ao elemento pai que tiver uma pition diferente de static. se ele não achar no elemento pai, vai buscar a referencia no proprio body;
     */
+
+    z-index: 1; 
+    /*
+    esta propriedade define a poisção relativa em relação aos irmãos. se vai ficar na frente ou atras de outro elemento. precisa ser usado em conjunto com o position: relative;
+    */
+
+    float: left; /*faz o lemento filho flutuar dentro do elemento pai. podendo colocar um texto ao lado de uma imagem por exemplo. fazendo ele cercar a imagem
+    é necessario colocar a propriedade overlow: auto; no elemto pai.
+
+    se precisar voltar ao fluxo normal do codigo mas continuar escrevendo dentro do elemento pai: uso o atributo clean: both;
+    */
+
 };
 .box-model {
     /*direção do flexbox*/
