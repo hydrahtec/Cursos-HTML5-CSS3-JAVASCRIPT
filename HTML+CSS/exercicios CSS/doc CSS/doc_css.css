@@ -97,8 +97,9 @@ quanto mais seletores usar para selecionar um elemento mais dificil será para a
    */
    border-color: brown;
 };
-.shadow {
+.shadow { 
     box-shadow: 10px 20px 30px 40px #ff0000 inset;
+    box-shadow: 0 4px 8px 0 rgb(0,0,0,0.19), 0 6px 20px 0 rgb(0,0,0,0.20); /*padrão para cards*/
     /*
     os 2 primeiros são descolamento x e y
     deopis o desfoque
@@ -107,9 +108,17 @@ quanto mais seletores usar para selecionar um elemento mais dificil será para a
     por ultimo inset (muda a sobra de tras para a frente).
 
     Os valores de cor e o valor inset podem aparecer no início e no fim do box-shadow, mas nunca entre os valores numéricos de deslocamento, desfoque e expansão.
+
+    valores negativos no descolacameno vai colocar as sombras na parte superior e esquerda.
     */
     /*
     teste: https://www.devmedia.com.br/view/viewaula.php?idcomp=43348
+    */
+
+    text-shadow: 3px 3px 5px red, 0 0 3 blue;
+    /*
+    da para colocar mais de uma sombra no elemento.
+    pesquisar por modelos na net
     */
 };
 
@@ -127,9 +136,8 @@ quanto mais seletores usar para selecionar um elemento mais dificil será para a
    /*
    pode transformar o texto por exemplo para maiscula, minuscula ou a primeira letra maiuscula.
    */
-   text-shadow: 0px;
    text-overflow: clip;
-   text-indent: 0%; /*recua a primeira linha do texto*/
+   text-indent: 0; /*recua a primeira linha do texto*/
    list-style: none;
    line-height: 1.5px; /*altura da linha*/
    line-break: auto;
@@ -138,7 +146,7 @@ quanto mais seletores usar para selecionar um elemento mais dificil será para a
 
    word-spacing: 15px; /*espaço entre as palavras*/
 
-   list-style-type: none; /*returia os desenhos das lista desordenadas*/
+   list-style-type: none; /*returia os desenhos das lista desordenadas*/   
 };
 
 .fontes {
@@ -187,6 +195,8 @@ Arial, Verdana, Helvetica, Trebuchet MS, Georgia, Courier New, Comic Sans MS, Br
     background: 0;
     background-color: darkturquoise;
     background-image: url('src');
+    background-image: linear-gradient(45deg, blue, rgb(40, 108, 255));
+    background-image: radial-gradient(blue, rgb(40, 108, 255));
     background-position: top;
     /*
         background-position: top;
@@ -498,7 +508,20 @@ Arial, Verdana, Helvetica, Trebuchet MS, Georgia, Courier New, Comic Sans MS, Br
 
     Adaptar o tamanho de botões, links e menus para interfaces touch onde o ponteiro do mouse é substituído pelo dedo do usuário.   
     */
+/* Smartphones (600px para baixo) */
+@media only screen and (max-width: 600px) {...}
 
+/* Dispositivos um pouco maiores, mas ainda pequenos (Pequenos Tablets e Smartphones + largos, 600px para cima) */
+@media only screen and (min-width: 600px) {...}
+
+/*Dispostivos Médios (Tablets deitados, 768px para cima) */
+@media only screen and (min-width: 768px) {...}
+
+/* Dispostivos Largos (laptops/desktops, 992px para cima) */
+@media only screen and (min-width: 992px) {...}
+
+/* Super Largos (Telas maiores laptops, desktops e até TVs, 1200px para cima) */
+@media only screen and (min-width: 1200px) {...}
     /*Media Type
     O atributo Media Type é o responsável por designar quais regras CSS serão interpretadas por um determinado tipo de dispositivo, oferecendo a melhor apresentação possível do conteúdo sem a necessidade de alteração do mesmo.
 
