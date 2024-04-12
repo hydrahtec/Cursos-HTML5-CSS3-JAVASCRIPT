@@ -1,0 +1,8 @@
+@mixin button_style ($background, $color) {
+    background: $background;
+    color: $color;
+
+    &:hover {
+        background: darken($background, 30%)
+    }
+}
