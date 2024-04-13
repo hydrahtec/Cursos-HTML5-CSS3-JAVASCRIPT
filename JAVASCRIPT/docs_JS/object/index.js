@@ -1,4 +1,6 @@
 // chave / valor
+// obj.propriedade - acesso por chave válida  
+// obj['propriedade'] - acesso por chave inválida
 
 let produto = {
     id: 9,

@@ -9,12 +9,15 @@
         "exemplos",
         "idade",
         "indice",
+        "inválida",
         "ligado",
         "manipulação",
         "objetos",
         "produto",
+        "propriedade",
         "sobrenome",
         "telefone",
-        "tipo"
+        "tipo",
+        "válida"
     ]
 }
